@@ -26,3 +26,5 @@ Challenge Page: ![Alt Text](/images/Wireframe3.jpg)
 Leaderboard: ![Alt Text](/images/Wireframe4.jpg)
 
 Gameboard: ![Alt Text](/images/Wireframe5.jpg)
+
+Component Layout: ![Alt Text](/images/ComponentLayout.png)

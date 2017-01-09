@@ -13,6 +13,9 @@ Socket.io: https://www.npmjs.com/package/socket.io
 API- Open Trivia DB: https://opentdb.com/
 EJS
 
+#User Stories
+This is where the stories go about why people should want to use this app.
+
 #Wireframe
 Loading Page: ![Loading Page](/images/Wireframe1.jpg)
 

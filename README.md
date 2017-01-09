@@ -14,17 +14,12 @@ API- Open Trivia DB: https://opentdb.com/
 EJS
 
 #Wireframe
-![GitHub Logo](/images/Wireframe1.jpg)
-Format: ![Loading Page](/images/Wireframe1.jpg)
+Loading Page: ![Loading Page](/images/Wireframe1.jpg)
 
-![GitHub Stuff](/images/Wireframe2.jpg)
-Format: ![I'm changing this text](/images/Wireframe2.jpg)
+Chat Page: ![Chat Page](/images/Wireframe2.jpg)
 
-![GitHub Logo](/images/Wireframe3.jpg)
-Format: ![Alt Text](url)
+Challenge Page: ![Alt Text](/images/Wireframe3.jpg)
 
-![GitHub Logo](/images/Wireframe4.jpg)
-Format: ![Alt Text](url)
+Leaderboard: ![Alt Text](/images/Wireframe4.jpg)
 
-![GitHub Logo](/images/Wireframe5.jpg)
-Format: ![Alt Text](url)
+Gameboard: ![Alt Text](/images/Wireframe5.jpg)

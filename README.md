@@ -15,10 +15,10 @@ EJS
 
 #Wireframe
 ![GitHub Logo](/images/Wireframe1.jpg)
-Format: ![Alt Text](url)
+Format: ![Loading Page](/images/Wireframe1.jpg)
 
 ![GitHub Stuff](/images/Wireframe2.jpg)
-Format: ![Alt Text](/images/Wireframe2.jpg)
+Format: ![I'm changing this text](/images/Wireframe2.jpg)
 
 ![GitHub Logo](/images/Wireframe3.jpg)
 Format: ![Alt Text](url)

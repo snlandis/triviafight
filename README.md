@@ -28,3 +28,5 @@ Leaderboard: ![Alt Text](/images/Wireframe4.jpg)
 Gameboard: ![Alt Text](/images/Wireframe5.jpg)
 
 Component Layout: ![Alt Text](/images/ComponentLayout.png)
+
+<!-- added staging branch. - delete this line -->

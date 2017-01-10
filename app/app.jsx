@@ -8,6 +8,7 @@ var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 var Main = require('Main');
 var Weather = require('Weather');
 var About = require('About');
+var Chat = require('Chat');
 var Examples = require('Examples');
 
 
@@ -26,7 +27,7 @@ ReactDOM.render(
 
     <Route path="/" component={Main}>
 
-        <IndexRoute component={Weather} />
+        <IndexRoute component={Chat} />
         <Route path="examples" component={Examples}/>
         <Route path="about" component={About}/>
 

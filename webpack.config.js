@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry : [
@@ -29,6 +30,11 @@ module.exports = {
       Logos: 'app/components/Logos.jsx',
       Weather: 'app/components/Weather.jsx',
       About: 'app/components/About.jsx',
+			Timer: 'app/components/Timer.jsx',
+			CountdownForm: 'app/components/CountdownForm.jsx',
+			Countdown: 'app/components/Countdown.jsx',
+			Controls: 'app/components/Controls.jsx',
+			Clock: 'app/components/Clock.jsx',
       Examples: 'app/components/Examples.jsx',
       WeatherForm: 'app/components/WeatherForm.jsx',
       WeatherMessage: 'app/components/WeatherMessage.jsx',
@@ -53,13 +59,18 @@ module.exports = {
         exclude : /(node_modules | bower_components)/
       },
       {
-       test: /\.png$/,
-       loader: "url-loader?mimetype=image/png"
-     }, {
-       test: /\.jpg$/,
-       loader: "url-loader?mimetype=image/jpg"
-     }
-    ]
-
-  }
+	       test: /\.png$/,
+	       loader: "url-loader?mimetype=image/png"
+	     }, {
+	       test: /\.jpg$/,
+	       loader: "url-loader?mimetype=image/jpg"
+	     }
+	    ]
+		},
+		sassLoader: {
+		includePaths: [
+			path.resolve(__dirname, './node_modules/foundation-sites/scss')
+		]
+	},
+	devtool: 'cheap-module-eval-source-map'
 };

@@ -1,3 +1,15 @@
+@import "base/variables";
+
+//foundation
+@import "base/foundation-settings";
+@import "foundation";
+@include foundation-everything;
+
+//Components
+@import "components/clock";
+@import "components/controls";
+
+
 $space-30: 30px;
 $page-title-color: rgba(234,191,134,1);
 

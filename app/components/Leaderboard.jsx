@@ -1,4 +1,5 @@
 var React = require('react');
+var {Link} = require('react-router');
 // var About = React.createClass({
 //   render: function () {
 //     return (
@@ -8,7 +9,7 @@ var React = require('react');
 // });
 // This is lines 3-9 refactored.
 
-var About = (props) => {
+var Leaderboard = (props) => {
   return (
     <div>
       <h1 className="text-center page-title font">About this App</h1>
@@ -29,4 +30,4 @@ var About = (props) => {
   </div>
   )
 }
-module.exports = About;
+module.exports = Leaderboard;

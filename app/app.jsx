@@ -7,9 +7,9 @@ var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 var Main = require('Main');
 var Weather = require('Weather');
-var About = require('About');
+var Leaderboard = require('Leaderboard');
 var Chat = require('Chat');
-var Examples = require('Examples');
+var Challenge = require('Challenge');
 var Timer = require('Timer');
 var Countdown = require('Countdown');
 var Gameroom = require('Gameroom');
@@ -42,8 +42,8 @@ ReactDOM.render(
     <Route path="/" component={Main}>
 
         <IndexRoute component={Chat} />
-        <Route path="examples" component={Examples}/>
-        <Route path="about" component={About}/>
+        <Route path="Challenge" component={Challenge}/>
+        <Route path="Leaderboard" component={Leaderboard}/>
 				<Route path="gameroom" component={Gameroom}/>
 
     </Route>

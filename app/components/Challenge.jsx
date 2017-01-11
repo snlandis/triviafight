@@ -1,7 +1,7 @@
 var React = require('react');
 var {Link} = require('react-router');
 
-var Examples = React.createClass({
+var Challenge = React.createClass({
   render: function () {
     return(
       <div >
@@ -35,4 +35,4 @@ var Examples = React.createClass({
   }
 });
 
-module.exports = Examples;
+module.exports = Challenge;

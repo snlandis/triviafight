@@ -57,7 +57,7 @@ module.exports = {
       Footer: 'app/components/Footer.jsx',
       Logos: 'app/components/Logos.jsx',
       Weather: 'app/components/Weather.jsx',
-      About: 'app/components/About.jsx',
+      Challenge: 'app/components/Challenge.jsx',
 			Timer: 'app/components/Timer.jsx',
 			CountdownForm: 'app/components/CountdownForm.jsx',
 			Countdown: 'app/components/Countdown.jsx',

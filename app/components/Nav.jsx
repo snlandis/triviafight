@@ -25,10 +25,10 @@ var Nav = React.createClass({
               <IndexLink to="/" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Trivia Fight</IndexLink>
             </div>
             <div>
-              <Link to="/about" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Challenge</Link>
+              <Link to="/challenge" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Challenge</Link>
             </div>
             <div>
-              <Link to="/examples" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Leader Board</Link>
+              <Link to="/leaderboard" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Leader Board</Link>
             </div>
 						<div>
               <Link to="/gameroom" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Game Room</Link>

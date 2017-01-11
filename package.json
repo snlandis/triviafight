@@ -5,7 +5,7 @@
   "main": "index.js",
 	"scripts": {
     "test": "NODE_ENV=test karma start",
-    "build": "webpack -p",
+    "build": "webpack",
     "start": "npm run build && node server.js"
   },
   "author": "Kollin Brandenburg",

@@ -6,7 +6,7 @@ var Gameroom = React.createClass({
   render: function() {
     return (
       <div className="gameroom">
-          <p>lots of words and shit goes here...</p>
+          <p>lots of words and shit goes here.....</p>
       </div>
     );
   }

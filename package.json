@@ -1,14 +1,14 @@
 {
-  "name": "WeatherAppReact",
+  "name": "TriviaFight",
   "version": "1.0.0",
-  "description": "A Weather Application",
+  "description": "A trivia challenge game",
   "main": "index.js",
 	"scripts": {
     "test": "NODE_ENV=test karma start",
     "build": "webpack",
     "start": "npm run build && node server.js"
   },
-  "author": "Kollin Brandenburg",
+  "author": "Kollin Brandenburg, Luke Popwell",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.13.1",

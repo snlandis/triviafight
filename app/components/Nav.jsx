@@ -18,17 +18,20 @@ var Nav = React.createClass({
       <div className="top-bar">
         <div className="top-bar-left">
           <div className="menu">
-            <div className="menu-text cursor-default app-name">
-              React Weather App
+            {/* <div className="menu-text cursor-default app-name">
+              Trivia Fight
+            </div> */}
+            <div>
+              <IndexLink to="/" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Trivia Fight</IndexLink>
             </div>
             <div>
-              <IndexLink to="/" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Get Weather</IndexLink>
+              <Link to="/about" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Challenge</Link>
             </div>
             <div>
-              <Link to="/about" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>About</Link>
+              <Link to="/examples" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Leader Board</Link>
             </div>
-            <div>
-              <Link to="/examples" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Examples</Link>
+						<div>
+              <Link to="/gameroom" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Game Room</Link>
             </div>
 
          </div>

@@ -44,7 +44,7 @@ ReactDOM.render(
         <IndexRoute component={Chat} />
         <Route path="Challenge" component={Challenge}/>
         <Route path="Leaderboard" component={Leaderboard}/>
-				<Route path="gameroom" component={Gameroom}/>
+				<Route path="Gameroom" component={Gameroom}/>
 
     </Route>
 

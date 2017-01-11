@@ -1,8 +1,6 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
-var Nav = require('Nav');
-var Footer = require('Footer');
-var Logos = require('Logos');
+var {Link} = require('react-router');
+
 
 var Gameroom = React.createClass({
   render : function(){

@@ -13,6 +13,7 @@ var Examples = require('Examples');
 var Timer = require('Timer');
 var Countdown = require('Countdown');
 
+import './../sandbox/firebase/index';
 
 
 // Load foundation

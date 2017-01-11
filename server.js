@@ -31,6 +31,17 @@ app.listen(PORT, function(){
   console.log('Express server is up on port ' + PORT);
 });
 
+
+
+
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+
+app.use('/app', express.static(__dirname + '/app'));
+app.get('/', function(req, res){
+  res.sendFile(__dirname + "/index.html");
+});
+
 //User Create
 app.post('/signup', userController.signup);
 

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A Weather Application",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+	"scripts": {
+    "test": "NODE_ENV=test karma start",
+    "build": "webpack",
+    "start": "npm run build && node server.js"
   },
   "author": "Kollin Brandenburg",
   "license": "MIT",

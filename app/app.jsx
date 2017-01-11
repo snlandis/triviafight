@@ -13,8 +13,19 @@ var Examples = require('Examples');
 var Timer = require('Timer');
 var Countdown = require('Countdown');
 
-import './../sandbox/firebase/index';
+import firebase from 'app/firebase/';
+// import './../sandbox/firebase/index';
 
+// firebase.auth().onAuthStateChanged((user) => {
+//   if (user) {
+//     store.dispatch(actions.login(user.uid));
+//     store.dispatch(actions.startAddTodos());
+//     hashHistory.push('/todos');
+//   } else {
+//     store.dispatch(actions.logout());
+//     hashHistory.push('/');
+//   }
+// });
 
 // Load foundation
 // require('style!css!foundation-sites/dist/css/foundation.min.css')

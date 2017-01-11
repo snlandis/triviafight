@@ -1,16 +1,6 @@
 import firebase from 'firebase';
 
 
-// // Initialize Firebase
-//   var config = {
-//     apiKey: "AIzaSyCxFxBsNBHM13iIodrvdIaEV2GW6JWGhKU",
-//     authDomain: "trivia-fight.firebaseapp.com",
-//     databaseURL: "https://trivia-fight.firebaseio.com",
-//     storageBucket: "trivia-fight.appspot.com",
-//     messagingSenderId: "571620890403"
-//   };
-//   firebase.initializeApp(config);
-
 	var firebaseRef = firebase.database().ref();
 
 	firebaseRef.set({

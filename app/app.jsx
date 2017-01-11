@@ -14,7 +14,6 @@ var Timer = require('Timer');
 var Countdown = require('Countdown');
 
 import firebase from 'app/firebase/';
-// import './../sandbox/firebase/index';
 
 // firebase.auth().onAuthStateChanged((user) => {
 //   if (user) {

@@ -38,3 +38,20 @@ import firebase from 'firebase';
 	testsRef.push({
 	  text: 'Test 2'
 	});
+  var chatRef = firebase.database().ref();
+  // Create an instance of Firechat
+  var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
+  // Listen for authentication state changes
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // If the user is logged in, set them as the Firechat user
+      chat.setUser(user.uid, "Anonymous" + user.uid.substr(10, 8));
+    } else {
+      // If the user is not logged in, sign them in anonymously
+      firebase.auth().signInAnonymously().catch(function(error) {
+        console.log("Error signing user in anonymously:", error);
+      });
+    }
+  });
+
+  export default firebase;

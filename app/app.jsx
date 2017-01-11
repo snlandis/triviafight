@@ -12,6 +12,7 @@ var Chat = require('Chat');
 var Examples = require('Examples');
 var Timer = require('Timer');
 var Countdown = require('Countdown');
+var Gameroom = require('Gameroom');
 
 import firebase from 'app/firebase/';
 
@@ -43,6 +44,7 @@ ReactDOM.render(
         <IndexRoute component={Chat} />
         <Route path="examples" component={Examples}/>
         <Route path="about" component={About}/>
+				<Route path="gameroom" component={Gameroom}/>
 
     </Route>
 

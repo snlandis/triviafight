@@ -11,6 +11,7 @@ var About = require('About');
 var Chat = require('Chat');
 var Examples = require('Examples');
 
+import './../sandbox/firebase/index';
 
 
 // Load foundation

@@ -25,6 +25,7 @@ var redirectIfLoggedIn = (nextState, replace, next) => {
   next();
 };
 
+
 export default (
   <Router history={hashHistory}>
     <Route path="/">

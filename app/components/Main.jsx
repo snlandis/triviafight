@@ -3,8 +3,6 @@ var Nav = require('Nav');
 var Footer = require('Footer');
 var Logos = require('Logos');
 
-
-
 var Main = React.createClass({
   render : function(){
     return (

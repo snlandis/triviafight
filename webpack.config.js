@@ -64,6 +64,7 @@ module.exports = {
 			Controls: 'app/components/Controls.jsx',
 			Clock: 'app/components/Clock.jsx',
       Examples: 'app/components/Examples.jsx',
+			Login: 'app/components/Login.jsx',
 			Gameroom: 'app/components/Gameroom.jsx',
       WeatherForm: 'app/components/WeatherForm.jsx',
       WeatherMessage: 'app/components/WeatherMessage.jsx',

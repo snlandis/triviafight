@@ -1,9 +1,18 @@
-.imgRight {
-  align-content: flex-end;
-  max-width: 50%;
+#right {
+  max-width: 60%;
   opacity: 0.7;
+  text-align: center;
 }
-.imgLeft {
-  max-width: 50%;
+#left {
+  max-width: 60%;
   opacity: 0.7;
+  text-align: center;
+}
+.imgRight {
+       -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
 }

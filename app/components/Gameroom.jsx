@@ -32,7 +32,7 @@ export var Gameroom = React.createClass({
             </div>
             <LogoRight />
           </div>
-        <Footer />
+        <Footer  />
       </div>
     );
   }

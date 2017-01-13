@@ -2,6 +2,9 @@ body {
   font-family: 'proxima-nova', sans-serif;
   margin: 0;
 }
+.imgRight{
+  align-content:flex-end;
+}
 
 html, body, #app, .container {
   min-height: 100vh;

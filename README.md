@@ -4,11 +4,17 @@ Real time trivia/chat app where you can compete against people in a battle of wi
 
 #Technologies Used:
 React.js
+<br>
 Node.js
+<br>
 Firebase
+<br>
 Heroku
+<br>
 Socket.io: https://www.npmjs.com/package/socket.io
+<br>
 API- Open Trivia DB: https://opentdb.com/
+<br>
 EJS
 
 #User Stories

@@ -7,8 +7,6 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const INDEX = __dirname + '/index.html';
-var server = http.createServer(app);
-const io = socketIO.listen(server);
 
 
 var userController = require('./server/controllers/user-controller.js');

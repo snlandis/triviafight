@@ -53,6 +53,11 @@ module.exports = {
     alias: {
       Main: 'app/components/Main.jsx',
       Chat: 'app/components/Chat.jsx',
+      App: 'app/components/App.js',
+      ChatApp: 'app/components/ChatApp.js',
+      ChatInput: 'app/components/ChatInput.js',
+      Message: 'app/components/Message.js',
+      Messages: 'app/components/Messages.js',
       Nav: 'app/components/Nav.jsx',
       Footer: 'app/components/Footer.jsx',
       Logos: 'app/components/Logos.jsx',
@@ -86,6 +91,30 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.sass/,
+        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax'
+      },
+      {
+        test: /\.less/,
+        loader: 'style-loader!css-loader!less-loader'
+      },
+      {
+        test: /\.styl/,
+        loader: 'style-loader!css-loader!stylus-loader'
+      },
+      {
+        test: /\.(png|jpg|gif|woff|woff2)$/,
+        loader: 'url-loader?limit=8192'
+      },
+      {
+        test: /\.(mp4|ogg|svg)$/,
+        loader: 'file-loader'
       }
     ]
   },

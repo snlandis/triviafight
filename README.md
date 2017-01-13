@@ -27,11 +27,11 @@ Gameboard: ![Alt Text](/images/Wireframe5.jpg)
 
 Component Layout: ![Alt Text](/images/ComponentLayout.png)
 
--level 1
---level2
---level2
----level3
----level3
----level3
---level2
---level2
+*level 1
+  *level2
+  *level2
+    *level3
+    *level3
+    *level3
+  *level2
+  *level2

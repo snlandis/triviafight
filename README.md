@@ -38,4 +38,14 @@ Component Layout: ![Alt Text](/images/ComponentLayout.png)
 <br>
 ```npm install```
 <br>
+Go to firebase and create an account.
+<br>
+Click on "Get Started for Free"
+<br>
+Click on "Create New Project"
+<br>
+Click on "Add Firebase to your Web App"
+<br>
+<br>
+To run the file in localhost:
 ```node server.js```

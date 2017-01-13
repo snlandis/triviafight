@@ -2,8 +2,6 @@
 
 Real time trivia/chat app where you can compete against people in a battle of wits.
 
-Original Boilerplate can be found on: http://reactboilerplate.com/
-
 #Technologies Used:
 React.js
 Node.js

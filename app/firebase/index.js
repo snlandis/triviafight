@@ -49,5 +49,6 @@ testsRef.push({
 /*this is the bottom cut off line. everything above to be removed */
 
 export var githubProvider = new firebase.auth.GithubAuthProvider();
+export var provider = new firebase.auth.TwitterAuthProvider();
 export var firebaseRef = firebase.database().ref();
 export default firebase;

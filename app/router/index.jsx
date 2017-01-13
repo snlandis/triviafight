@@ -10,44 +10,44 @@ import Challenge from 'Challenge';
 import Gameroom from 'Gameroom';
 
 
-// var requireLogin = (nextState, replace, next) => {
-//   if (!firebase.auth().currentUser) {
-//     replace('/main');
-//   }
-//   next();
-// };
-//
-// var redirectIfLoggedIn = (nextState, replace, next) => {
-//   if (firebase.auth().currentUser) {
-//     replace('/main');
-//   }
-//
-//   next();
-// };
+var requireLogin = (nextState, replace, next) => {
+  if (!firebase.auth().currentUser) {
+    replace('/');
+  }
+  next();
+};
 
+var redirectIfLoggedIn = (nextState, replace, next) => {
+  if (firebase.auth().currentUser) {
+    replace('/main');
+  }
 
-export default (
-  <Router history={hashHistory}>
-    <Route path="/">
-			<Route path="Challenge" component={Challenge}/>
-			<Route path="Leaderboard" component={Leaderboard}/>
-			<Route path="Gameroom" component={Gameroom}/>
-			<Route path="Main" component={Main}/>
-			<IndexRoute component={Main}/>
-    </Route>
-  </Router>
-);
-
+  next();
+};
 
 
 // export default (
 //   <Router history={hashHistory}>
 //     <Route path="/">
-//       <Route path="main" component={Main} onEnter={requireLogin}/>
 // 			<Route path="Challenge" component={Challenge}/>
 // 			<Route path="Leaderboard" component={Leaderboard}/>
 // 			<Route path="Gameroom" component={Gameroom}/>
-//       <IndexRoute component={Login} onEnter={redirectIfLoggedIn}/>
+// 			<Route path="Main" component={Main}/>
+// 			<IndexRoute component={Main}/>
 //     </Route>
 //   </Router>
 // );
+
+
+
+export default (
+  <Router history={hashHistory}>
+    <Route path="/">
+      <Route path="main" component={Main} onEnter={requireLogin}/>
+			<Route path="Challenge" component={Challenge}/>
+			<Route path="Leaderboard" component={Leaderboard}/>
+			<Route path="Gameroom" component={Gameroom}/>
+      <IndexRoute component={Login} onEnter={redirectIfLoggedIn}/>
+    </Route>
+  </Router>
+);

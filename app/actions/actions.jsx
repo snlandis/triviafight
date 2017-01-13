@@ -1,5 +1,5 @@
 import moment from 'moment';
-import firebase, {firebaseRef, githubProvider} from 'app/firebase/';
+import firebase, {firebaseRef, githubProvider, TwitterAuthProvider} from 'app/firebase/';
 
 
 export var login = (uid) => {
@@ -11,7 +11,15 @@ export var login = (uid) => {
 
 export var startLogin = () => {
   return (dispatch, getState) => {
-    return firebase.auth().signInWithPopup(githubProvider,).then((result) => {
+    return firebase.auth().signInWithPopup(TwitterAuthProvider).then((result) => {
+      console.log('Auth worked!', result);
+    }, (error) => {
+      console.log('Unable to auth', error);
+    });
+  };
+
+	return (dispatch, getState) => {
+    return firebase.auth().signInWithPopup(TwitterAuthProvider).then((result) => {
       console.log('Auth worked!', result);
     }, (error) => {
       console.log('Unable to auth', error);

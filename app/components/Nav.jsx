@@ -1,8 +1,12 @@
 var React = require('react');
 /*how the routes are defined, using inde link show the main link selected only when it is required*/
 var {Link, IndexLink} = require('react-router');
-var Nav = React.createClass({
 
+import * as Redux from 'react-redux';
+import * as actions from 'actions';
+import router from 'app/router/';
+
+var Nav = React.createClass({
   onSearch: function(e){
     e.preventDefault();
     var location = this.refs.location.value;
@@ -13,16 +17,13 @@ var Nav = React.createClass({
     }
   },
 
-  render: function () {
+  render() {
     return(
       <div className="top-bar">
         <div className="top-bar-left">
           <div className="menu">
-            {/* <div className="menu-text cursor-default app-name">
-              Trivia Fight
-            </div> */}
             <div>
-              <IndexLink to="/" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Trivia Fight</IndexLink>
+              <Link to="/main" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Trivia Fight</Link>
             </div>
             <div>
               <Link to="/challenge" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Challenge</Link>
@@ -55,3 +56,4 @@ var Nav = React.createClass({
 });
 
 module.exports = Nav;
+// export default Redux.connect()(Nav);

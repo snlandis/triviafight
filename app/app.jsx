@@ -4,7 +4,9 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var {Provider} = require('react-redux');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+
 var Main = require('Main');
 var Weather = require('Weather');
 var Leaderboard = require('Leaderboard');
@@ -14,18 +16,21 @@ var Timer = require('Timer');
 var Countdown = require('Countdown');
 var Gameroom = require('Gameroom');
 
+var actions = require('actions');
+var store = require('configureStore').configure();
 import firebase from 'app/firebase/';
+import router from 'app/router/';
 
-// firebase.auth().onAuthStateChanged((user) => {
-//   if (user) {
-//     store.dispatch(actions.login(user.uid));
-//     store.dispatch(actions.startAddTodos());
-//     hashHistory.push('/todos');
-//   } else {
-//     store.dispatch(actions.logout());
-//     hashHistory.push('/');
-//   }
-// });
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    store.dispatch(actions.login(user.uid));
+    hashHistory.push('/main');
+  } else {
+    store.dispatch(actions.logout());
+    hashHistory.push('/');
+  }
+});
 
 // Load foundation
 // require('style!css!foundation-sites/dist/css/foundation.min.css')
@@ -37,17 +42,8 @@ require ('style!css!sass!applicationStyles')
 
 
 ReactDOM.render(
-  <Router history={hashHistory}>
-
-    <Route path="/" component={Main}>
-
-        <IndexRoute component={Chat} />
-        <Route path="Challenge" component={Challenge}/>
-        <Route path="Leaderboard" component={Leaderboard}/>
-				<Route path="Gameroom" component={Gameroom}/>
-
-    </Route>
-
-  </Router>,
+	<Provider store={store}>
+    {router}
+  </Provider>,
   document.getElementById('app')
 );

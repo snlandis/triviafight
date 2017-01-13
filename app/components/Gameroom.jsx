@@ -1,15 +1,40 @@
 var React = require('react');
 var {Link} = require('react-router');
+var Nav = require('Nav');
+var Footer = require('Footer');
+var Logos = require('Logos');
 
+import * as Redux from 'react-redux';
+import * as actions from 'actions';
+import router from 'app/router/';
 
-var Gameroom = React.createClass({
-  render: function() {
+export var Gameroom = React.createClass({
+	onLogout(e) {
+    var {dispatch} = this.props;
+    e.preventDefault();
+
+    dispatch(actions.startLogout());
+  },
+
+  render() {
     return (
-      <div className="gameroom">
-          <p>lots of words and shit goes here.....</p>
+			<div className="font main">
+        <Nav />
+				<div className="page-actions">
+					<a href="#" onClick={this.onLogout}>Logout</a>
+				</div>
+          <div className="row">
+            <Logos />
+            <div className="columns medium-6 large-4 small-centered">
+							<p>lots of words and shit goes here.....</p>
+            </div>
+            <Logos />
+          </div>
+        <Footer />
       </div>
     );
   }
 });
 
-module.exports = Gameroom;
+// module.exports = Gameroom;
+export default Redux.connect()(Gameroom);

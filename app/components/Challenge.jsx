@@ -2,7 +2,8 @@ var React = require('react');
 var {Link} = require('react-router');
 var Nav = require('Nav');
 var Footer = require('Footer');
-var Logos = require('Logos');
+var LogoLeft = require('LogoLeft');
+var LogoRight = require('LogoRight');
 
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
@@ -25,7 +26,7 @@ export var Challenge = React.createClass({
 					<a href="#" onClick={this.onLogout}>Logout</a>
 				</div>
 					<div className="row">
-						<Logos />
+						<LogoLeft />
 						<div className="columns medium-6 large-4 small-centered">
 							<h1 className="text-center page-title font">Challenge</h1>
 								<p>Here are a few examples</p>
@@ -56,7 +57,7 @@ export var Challenge = React.createClass({
 										</li>
 									</ol>
 								</div>
-						<Logos />
+						<LogoRight />
 						</div>
 				<Footer />
 		</div>

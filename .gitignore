@@ -10,4 +10,4 @@ npm-debug.log
 .idea
 
 public/bundle.js
-config/
+config

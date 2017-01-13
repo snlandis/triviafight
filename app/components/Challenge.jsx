@@ -43,7 +43,7 @@ export var Challenge = React.createClass({
 											<Link to="/?location=Faro, Portugal">Faro, Portugal</Link>
 										</li>
 										<li>
-											<Link to="/?location=San Fransisco, California">San Fransisco, California</Link>
+											<Link to="/?location=San Francisco, California">San Francisco, California</Link>
 										</li>
 										<li>
 											<Link to="/?location=Sydney, Australia">Sydney, Australia</Link>

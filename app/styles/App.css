@@ -9,6 +9,7 @@ html, body, #app, .container {
   max-width: 100%;
 }
 
+
 input[type="text"] {
   margin: 10px 0px;
   height: 60px;

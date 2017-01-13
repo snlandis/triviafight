@@ -1,7 +1,8 @@
 import React from 'react';
 var Nav = require('Nav');
 var Footer = require('Footer');
-var Logos = require('Logos');
+var LogoLeft = require('LogoLeft');
+var LogoRight = require('LogoRight');
 var Clock = require('Clock');
 var CountdownForm = require('CountdownForm');
 var Countdown = require('Countdown');
@@ -28,11 +29,11 @@ export var Main = React.createClass({
 					<a href="#" onClick={this.onLogout}>Logout</a>
 				</div>
           <div className="row">
-            <Logos />
+            <LogoLeft />
             <div className="columns medium-6 large-4 small-centered">
 							<Countdown />
             </div>
-            <Logos />
+            <LogoRight />
           </div>
         <Footer />
       </div>

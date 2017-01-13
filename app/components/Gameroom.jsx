@@ -2,7 +2,9 @@ var React = require('react');
 var {Link} = require('react-router');
 var Nav = require('Nav');
 var Footer = require('Footer');
-var Logos = require('Logos');
+var LogoLeft = require('LogoLeft');
+var LogoRight = require('LogoRight');
+
 
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
@@ -24,11 +26,11 @@ export var Gameroom = React.createClass({
 					<a href="#" onClick={this.onLogout}>Logout</a>
 				</div>
           <div className="row">
-            <Logos />
+            <LogoLeft />
             <div className="columns medium-6 large-4 small-centered">
 							<p>lots of words and shit goes here.....</p>
             </div>
-            <Logos />
+            <LogoRight />
           </div>
         <Footer />
       </div>

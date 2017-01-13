@@ -2,7 +2,9 @@ var React = require('react');
 var {Link} = require('react-router');
 var Nav = require('Nav');
 var Footer = require('Footer');
-var Logos = require('Logos');
+var LogoLeft = require('LogoLeft');
+var LogoRight = require('LogoRight');
+
 
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
@@ -24,7 +26,7 @@ export var Leaderboard = React.createClass({
 				<a href="#" onClick={this.onLogout}>Logout</a>
 			</div>
 				<div className="row">
-					<Logos />
+					<LogoLeft />
 					<div className="columns medium-6 large-4 small-centered">
 						<h1 className="text-center page-title font">Leaderboard</h1>
 				      <p>Current standings.</p>
@@ -41,7 +43,7 @@ export var Leaderboard = React.createClass({
 				        </li>
 				      </ul>
 					</div>
-					<Logos />
+					<LogoRight />
 				</div>
 			<Footer />
 		</div>

@@ -32,3 +32,20 @@ Component Layout: ![Alt Text](/images/ComponentLayout.png)
 * Item 2
   * Sub Item 1
   * Sub Item 2
+
+###To Run project on your own:
+```git clone https://github.com/ZHamburglar/triviafight.git```
+<br>
+```npm install```
+<br>
+Go to firebase and create an account.
+<br>
+Click on "Get Started for Free"
+<br>
+Click on "Create New Project"
+<br>
+Click on "Add Firebase to your Web App"
+<br>
+<br>
+To run the file in localhost:
+```node server.js```

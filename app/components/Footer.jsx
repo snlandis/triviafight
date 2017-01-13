@@ -4,7 +4,7 @@ var Footer = React.createClass({
   render : function(){
     return (
       <div className="font main">
-        <h2>This is where the footer is going to be.</h2>
+        <h6 className="foot">Created by <a href="https://github.com/kcricht06"><big>K</big></a> <a href="https://github.com/ZHamburglar"><big>K</big></a> <a href="https://github.com/Luke-Popwell"><big>L</big></a> <a href="https://github.com/snlandis"><big>S</big></a></h6>
       </div>
     );
   }

@@ -11,6 +11,7 @@ var Chat = React.createClass({
       <div className="font main">
 			<Countdown />
         <h1>Chat Box is here.</h1>
+        <App></App>
       </div>
     );
   }

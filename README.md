@@ -38,6 +38,12 @@ Component Layout: ![Alt Text](/images/ComponentLayout.png)
 <br>
 ```npm install```
 <br>
+In your project create a folder on the same level as /images, /public, and /server called "/config"
+<br>
+In that folder create two files called development.env and test.env
+<br>
+In those files create variables called:
+```API_KEY=<br>AUTH_DOMAIN=<br>DATABASE_URL=<br>STORAGE_BUCKET=```
 Go to firebase and create an account.
 <br>
 Click on "Get Started for Free"
@@ -46,6 +52,7 @@ Click on "Create New Project"
 <br>
 Click on "Add Firebase to your Web App"
 <br>
+When the app modal pops up, copy the variables and paste them into the corresponding variables that you created with the development.env and test.env files. 
 <br>
 To run the file in localhost:
 ```node server.js```

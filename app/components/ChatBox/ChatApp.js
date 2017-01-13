@@ -1,11 +1,11 @@
-require('../styles/ChatApp.css');
+require('../../styles/ChatApp.css');
 
 import React from 'react';
 import io from 'socket.io-client';
 import config from '../configure';
 
-import Messages from './Messages';
-import ChatInput from './ChatInput';
+import Messages from 'Messages';
+import ChatInput from 'ChatInput';
 
 class ChatApp extends React.Component {
   socket = {};

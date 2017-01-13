@@ -1,8 +1,8 @@
-require('../styles/App.css');
-require('../styles/Login.css');
+require('../../styles/App.css');
+require('../../styles/Login.css');
 
 import React from 'react';
-import ChatApp from './ChatApp';
+import ChatApp from 'ChatApp';
 
 class App extends React.Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Message from './Message';
+import Message from 'Message';
 
 class Messages extends React.Component {
   componentDidUpdate() {

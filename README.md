@@ -32,3 +32,8 @@ Component Layout: ![Alt Text](/images/ComponentLayout.png)
 * Item 2
   * Sub Item 1
   * Sub Item 2
+
+###To Run project on your own:
+```git clone https://github.com/ZHamburglar/triviafight.git```
+```npm install```
+```node server.js```

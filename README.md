@@ -44,10 +44,12 @@ In that folder create two files called development.env and test.env
 <br>
 In those files create variables called:
 
-```API_KEY=
+```
+API_KEY=
 AUTH_DOMAIN=
 DATABASE_URL=
-STORAGE_BUCKET=```
+STORAGE_BUCKET=
+```
 
 <br>
 Go to firebase and create an account.
@@ -61,4 +63,5 @@ Click on "Add Firebase to your Web App"
 When the app modal pops up, copy the variables and paste them into the corresponding variables that you created with the development.env and test.env files.
 <br>
 To run the file in localhost:
+
 ```node server.js```

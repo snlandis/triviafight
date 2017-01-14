@@ -28,12 +28,16 @@ export var Main = React.createClass({
 				<div className="page-actions">
 					<a href="#" onClick={this.onLogout}>Logout</a>
 				</div>
-          <div className="row">
-            <LogoLeft />
+          <div className="row" id="logorow">
+						<div className="columns medium-3 columns small-centered">
+						<LogoLeft />
+					</div>
             <div className="columns medium-6 large-4 small-centered">
 							<Countdown />
             </div>
-            <LogoRight />
+						<div className="columns medium-3 medium-centered">
+						<LogoRight />
+					</div>
           </div>
         <Footer />
       </div>

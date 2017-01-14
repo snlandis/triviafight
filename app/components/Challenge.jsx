@@ -25,40 +25,45 @@ export var Challenge = React.createClass({
 				<div className="page-actions">
 					<a href="#" onClick={this.onLogout}>Logout</a>
 				</div>
-					<div className="row">
-						<LogoLeft />
-						<div className="columns medium-6 large-4 small-centered">
-							<h1 className="text-center page-title font">Challenge</h1>
-								<p>Here are a few examples</p>
-								<p>
-									Here are some of the tools I used:
-								</p>
-									<ol >
-										<li>
-											<Link to="/?location=Austin, Texas">Austin, Texas</Link>
-										</li>
-										<li>
-											<Link to="/?location=London,UK">London, UK</Link>
-										</li>
-										<li>
-											<Link to="/?location=Faro, Portugal">Faro, Portugal</Link>
-										</li>
-										<li>
-											<Link to="/?location=San Francisco, California">San Francisco, California</Link>
-										</li>
-										<li>
-											<Link to="/?location=Sydney, Australia">Sydney, Australia</Link>
-										</li>
-										<li>
-											<Link to="/?location=Seoul, South Korea">Seoul, South Korea</Link>
-										</li>
-										<li>
-											<Link to="/?location=Rio, Brazil">Rio, Brazil</Link>
-										</li>
-									</ol>
-								</div>
-						<LogoRight />
+						<div className="row">
+							<div className="columns medium-3 columns small-centered">
+							<LogoLeft />
 						</div>
+	            <div className="columns medium-6 large-4 small-centered">
+									<h1 className="text-center page-title font">Challenge</h1>
+										<p>Here are a few examples</p>
+										<p>
+											Here are some of the tools I used:
+										</p>
+											<ol >
+												<li>
+													<Link to="/?location=Austin, Texas">Austin, Texas</Link>
+												</li>
+												<li>
+													<Link to="/?location=London,UK">London, UK</Link>
+												</li>
+												<li>
+													<Link to="/?location=Faro, Portugal">Faro, Portugal</Link>
+												</li>
+												<li>
+													<Link to="/?location=San Francisco, California">San Francisco, California</Link>
+												</li>
+												<li>
+													<Link to="/?location=Sydney, Australia">Sydney, Australia</Link>
+												</li>
+												<li>
+													<Link to="/?location=Seoul, South Korea">Seoul, South Korea</Link>
+												</li>
+												<li>
+													<Link to="/?location=Rio, Brazil">Rio, Brazil</Link>
+												</li>
+											</ol>
+										</div>
+
+							<div className="columns medium-3 medium-centered">
+							<LogoRight />
+						 </div>
+					</div>
 				<Footer />
 		</div>
     );

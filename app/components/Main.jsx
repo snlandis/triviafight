@@ -11,7 +11,7 @@ var Controls = require('Controls');
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
 import router from 'app/router/';
-import ChatRoom from './ChatRoom';
+import ChatRoom from './ChatBox/ChatRoom';
 
 
 

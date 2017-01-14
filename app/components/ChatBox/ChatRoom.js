@@ -55,12 +55,16 @@ class ChatRoom extends Component {
     return (
       <div>
         This is the Chatroom Component!
-        <ol>
-          {CurrentMessage}
-        </ol>
-        <input onChange={this.updateMessage} type="text" placeholder="Message" />
-        <br />
-        <button onClick={this.submitMessage}> Submit Message</button>
+        <div id="chatbox">
+          <ol>
+            {CurrentMessage}
+          </ol>
+        </div>
+        <div id="chatinput">
+          <input onChange={this.updateMessage} type="text" placeholder="Message" />
+          <br />
+          <button onClick={this.submitMessage} className="submitButton"> Submit Message</button>
+        </div>
       </div>
     )
   }

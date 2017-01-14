@@ -7,6 +7,7 @@ var Clock = require('Clock');
 var CountdownForm = require('CountdownForm');
 var Countdown = require('Countdown');
 var Controls = require('Controls');
+var ChatRoom = require('./ChatBox/ChatRoom')
 
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
@@ -34,6 +35,7 @@ export var Main = React.createClass({
 					</div>
             <div className="columns medium-6 large-4 small-centered">
 							<Countdown />
+							<ChatRoom></ChatRoom>
             </div>
 						<div className="columns medium-3 medium-centered">
 						<LogoRight />

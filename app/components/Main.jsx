@@ -11,6 +11,8 @@ var Controls = require('Controls');
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
 import router from 'app/router/';
+import ChatRoom from './ChatRoom';
+
 
 
 export var Main = React.createClass({
@@ -33,7 +35,7 @@ export var Main = React.createClass({
 						<LogoLeft />
 					</div>
             <div className="columns medium-6 large-4 small-centered">
-							<Countdown />
+							<ChatRoom></ChatRoom>
             </div>
 						<div className="columns medium-3 medium-centered">
 						<LogoRight />

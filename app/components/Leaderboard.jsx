@@ -52,33 +52,33 @@ export var Leaderboard = React.createClass({
 								<tbody>
 									<tr>
 										<td>1</td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td>DickFart</td>
+										<td>13451</td>
+										<td>2</td>
 									</tr>
 									<tr>
 										<td>2</td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td>ShitToot</td>
+										<td>69</td>
+										<td>420</td>
 									</tr>
 									<tr>
 										<td>3</td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td>Mike Dang</td>
+										<td>-532,345</td>
+										<td>-1000</td>
 									</tr>
 									<tr>
 										<td>4</td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td>BigDickHustler420</td>
+										<td>55</td>
+										<td>100</td>
 									</tr>
 									<tr>
 										<td>5</td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td>Crack</td>
+										<td>100</td>
+										<td>100</td>
 									</tr>
 									<tr>
 										<td>6</td>

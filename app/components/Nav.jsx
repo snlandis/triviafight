@@ -29,7 +29,7 @@ var Nav = React.createClass({
               <Link to="/challenge" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Challenge</Link>
             </div>
             <div>
-              <Link to="/leaderboard" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Leader Board</Link>
+              <Link to="/leaderboard" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Leaderboard</Link>
             </div>
 						<div>
               <Link to="/gameroom" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Game Room</Link>

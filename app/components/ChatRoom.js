@@ -10,18 +10,36 @@ class ChatRoom extends Component {
       messages: []
     }
   }
+
+  componentDidMount(){
+    console.log('componentDidMount')
+    firebase.database().ref('messages/').on('value', (snapshot) => {
+
+      const currentMessages = snapshot.val()
+
+      if(currentMessages != null){
+        this.setState({
+          messages: currentMessages
+        })
+      }
+    })
+  }
+
   submitMessage(event){
     console.log('submitMessage: '+ this.state.message)
     const nextMessage = {
       id: this.state.messages.length,
       text: this.state.message
     }
-    var list = Object.assign([], this.state.messages)
-    list.push(nextMessage)
-    this.setState({
-      messages: list
-    })
+    firebase.database().ref('messages/'+nextMessage.id).set(nextMessage)
+    // var list = Object.assign([], this.state.messages)
+    // list.push(nextMessage)
+    // this.setState({
+    //   messages: list
+    // })
+
   }
+
   updateMessage(event){
     console.log('updateMessage: '+ event.target.value)
     this.setState({

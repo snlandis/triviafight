@@ -26,24 +26,108 @@ export var Leaderboard = React.createClass({
 				<a href="#" onClick={this.onLogout}>Logout</a>
 			</div>
 				<div className="row">
-					<LogoLeft />
+
+
+						<div className="columns medium-3 columns small-centered">
+						<LogoLeft />
+					</div>
 					<div className="columns medium-6 large-4 small-centered">
 						<h1 className="text-center page-title font">Leaderboard</h1>
-				      <p>Current standings.</p>
-				      <p>
-				        Here are some of the tools I used:
-				      </p>
+						<div class="row">
+							<div class="large-12 columns medium-centered">
 
-				      <ul>
-				        <li>
-				          <a href="https://facebook.github.io/react">React</a> - This was the Javascript framework used produced by Facebook.
-				        </li>
-				        <li>
-				          <a href="http://openweathermap.org">Open Weather Map</a> - This is the API used in order to get weather updates.
-				        </li>
-				      </ul>
+
+						 <table>
+									<thead>
+									<tr>
+								<caption>Current Standings</caption>
+
+									<th></th>
+									<th>User</th>
+									<th>Wins&#8593;&#8595;</th>
+									<th>Points&#8593;&#8595;</th>
+								</tr>
+									</thead>
+
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<ul>
+								<li>
+									<a href="https://facebook.github.io/react">React</a> - This was the Javascript framework used produced by Facebook.
+								</li>
+								<li>
+									<a href="http://openweathermap.org">Open Weather Map</a> - This is the API used in order to get weather updates.
+								</li>
+							</ul>
 					</div>
-					<LogoRight />
+						<div className="columns medium-3 medium-centered">
+							<LogoRight />
+					</div>
+
 				</div>
 			<Footer />
 		</div>

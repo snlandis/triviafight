@@ -3,7 +3,7 @@ var React = require('react');
 var LogoRight = React.createClass({
   render : function(){
     return (
-      <div id="right" className="font main">
+      <div>
         <img className="imgRight" src="app/images/logo.png" alt="logo" />
       </div>
     );

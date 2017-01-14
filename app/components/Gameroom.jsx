@@ -25,12 +25,16 @@ export var Gameroom = React.createClass({
 				<div className="page-actions">
 					<a href="#" onClick={this.onLogout}>Logout</a>
 				</div>
-          <div className="row">
-            <LogoLeft />
+					<div className="row">
+						<div className="columns medium-3 columns small-centered">
+						<LogoLeft />
+					</div>
             <div className="columns medium-6 large-4 small-centered">
 							<p>lots of words and shit goes here.....</p>
             </div>
-            <LogoRight />
+						<div className="columns medium-3 medium-centered">
+						<LogoRight />
+					 </div>
           </div>
         <Footer  />
       </div>

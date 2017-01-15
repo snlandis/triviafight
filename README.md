@@ -21,17 +21,17 @@ EJS
 This is where the stories go about why people should want to use this app.
 
 #Wireframe
-Loading Page: ![Loading Page](/images/Wireframe1.jpg)
+Loading Page: ![Loading Page](app/images/Wireframe1.jpg)
 
-Chat Page: ![Chat Page](/images/Wireframe2.jpg)
+Chat Page: ![Chat Page](app/images/Wireframe2.jpg)
 
-Challenge Page: ![Alt Text](/images/Wireframe3.jpg)
+Challenge Page: ![Alt Text](app/images/Wireframe3.jpg)
 
-Leaderboard: ![Alt Text](/images/Wireframe4.jpg)
+Leaderboard: ![Alt Text](app/images/Wireframe4.jpg)
 
-Gameboard: ![Alt Text](/images/Wireframe5.jpg)
+Gameboard: ![Alt Text](app/images/Wireframe5.jpg)
 
-Component Layout: ![Alt Text](/images/ComponentLayout.png)
+Component Layout: ![Alt Text](app/images/ComponentLayout.png)
 
 ###Component Tree
 * Item 1

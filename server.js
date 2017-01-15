@@ -12,7 +12,8 @@ const INDEX = __dirname + '/index.html';
 var userController = require('./server/controllers/user-controller.js');
 var WebsocketServer = require('ws').Server;
 
-var server = new WebsocketServer({ port: 3210 });
+
+var server = new WebsocketServer({ port: 3001 });
 server.on('connection', function(socket) {
   socket.on('message', function(msg) {
     server.clients.forEach(function(other) {

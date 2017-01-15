@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Time from 'react-time'
+
 
 class ChatRoom extends Component {
   constructor(props, context){
@@ -29,7 +31,8 @@ class ChatRoom extends Component {
     console.log('submitMessage: '+ this.state.message)
     const nextMessage = {
       id: this.state.messages.length,
-      text: this.state.message
+      text: this.state.message,
+      timeCreated: Math.floor(Date.now())
     }
     firebase.database().ref('messages/'+nextMessage.id).set(nextMessage)
     // var list = Object.assign([], this.state.messages)
@@ -46,12 +49,16 @@ class ChatRoom extends Component {
       message: event.target.value
     })
   }
+
   render() {
     const CurrentMessage = this.state.messages.map((message, i) => {
+      let now = message.timeCreated
+
       return (
-        <li key={message.id}>{message.text}</li>
+        <li key={message.id} className="message-body"><Time value={now} format="HH:mm:ss" /> {message.text}</li>
       )
     })
+
     return (
       <div>
         This is the Chatroom Component!
@@ -63,7 +70,11 @@ class ChatRoom extends Component {
         <div id="chatinput">
           <input onChange={this.updateMessage} type="text" placeholder="Message" />
           <br />
-          <button onClick={this.submitMessage} className="submitButton"> Submit Message</button>
+          <input
+            onClick={this.submitMessage}
+            type="submit"
+            className="submitButton">
+          </input>
         </div>
       </div>
     )

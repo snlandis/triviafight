@@ -10,7 +10,6 @@ const INDEX = __dirname + '/index.html';
 
 
 var userController = require('./server/controllers/user-controller.js');
-
 var WebsocketServer = require('ws').Server;
 
 var server = new WebsocketServer({ port: 3210 });
@@ -42,9 +41,6 @@ app.use(express.static('public'));
 app.listen(PORT, function(){
   console.log('Express server is up on port ' + PORT);
 });
-
-
-
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());

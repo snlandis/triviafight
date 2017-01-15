@@ -1,9 +1,3 @@
 var React = require('react');
 
-var ChatMessage = React.createClass({
-  render: function() {
-    return <p>{this.props.message}</p>;
-  }
-});
-
-module.exports = ChatMessage
+module.exports = ({ message, from }) => <p>{from}: {message}</p>;

@@ -11,6 +11,20 @@ const INDEX = __dirname + '/index.html';
 
 var userController = require('./server/controllers/user-controller.js');
 
+var WebsocketServer = require('ws').Server;
+
+var server = new WebsocketServer({ port: 3210 });
+server.on('connection', function(socket) {
+  socket.on('message', function(msg) {
+    server.clients.forEach(function(other) {
+      if(other === socket) {
+        return;
+      }
+
+      other.send(msg);
+    });
+  });
+});
 
 // CHECK IF THE TRAFFIC IS ON HTTP or convert to HTTP
 app.use(function(req, res, next){

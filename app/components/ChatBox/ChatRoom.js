@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import Time from 'react-time'
+import firebase from 'app/firebase/';
+var ChatMessage = require('./ChatMessage');
+
+
 
 
 class ChatRoom extends Component {
@@ -27,7 +31,8 @@ class ChatRoom extends Component {
     })
   }
 
-  submitMessage(event){
+  submitMessage(e){
+    e.preventDefault();
     console.log('submitMessage: '+ this.state.message)
     const nextMessage = {
       id: this.state.messages.length,

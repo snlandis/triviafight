@@ -5,7 +5,7 @@ module.exports = React.createClass({
   //From the name from Log in
   getInitialState: () => ({ name: '' }),
 
-
+//Testing the change here
 	updateName: function(ev) {
 		this.setState({
 			name: ev.target.value

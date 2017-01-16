@@ -15,8 +15,7 @@ function Header ({ user, onAuth, onLogout }) {
         <li>
           <button
             className='hollow button alert'
-            onClick={onLogout}
-          >
+            onClick={onLogout}>
             Logout
           </button>
         </li>

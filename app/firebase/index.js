@@ -28,23 +28,16 @@ firebaseRef.set({
 	}
 });
 
-var testsRef = firebaseRef.child('tests');
+var testsRef = firebaseRef.child('DBConnection');
 
 testsRef.on('child_added', (snapshot) => {
-	console.log('New test added', snapshot.key, snapshot.val());
+	console.log('DBConnection: ', snapshot.key, snapshot.val());
 });
 
 testsRef.push({
-	text: 'Test 1 again'
+	text: 'Firebase is connected'
 });
 
-testsRef.push({
-	text: 'Test 2'
-});
-
-testsRef.push({
-	text: 'Test 3'
-});
 
 /*this is the bottom cut off line. everything above to be removed */
 

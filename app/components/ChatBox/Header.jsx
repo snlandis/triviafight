@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header ({ appName, user, onAuth, onLogout }) {
+function Header ({ user, onAuth, onLogout }) {
   function renderUserData () {
     return (
       <ul className='navbar right'>
@@ -42,7 +42,6 @@ function Header ({ appName, user, onAuth, onLogout }) {
   return (
     <nav className='blue darken-4'>
       <div className='nav-wrapper container'>
-        <a href='#' className='left brand-logo'>{appName}</a>
         {user ? renderUserData() : renderLoginButton()}
       </div>
     </nav>

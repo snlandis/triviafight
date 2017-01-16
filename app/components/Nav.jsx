@@ -5,6 +5,7 @@ var {Link, IndexLink} = require('react-router');
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
 import router from 'app/router/';
+import Header from './ChatBox/Header.jsx'
 
 var Nav = React.createClass({
   onSearch: function(e){
@@ -38,16 +39,7 @@ var Nav = React.createClass({
          </div>
         </div>
         <div className="top-bar-right">
-            <form onSubmit={this.onSearch}>
-              <ul className="menu">
-                <li>
-                  <input type="search" placeholder="Find an Opponent" className="nav-search" ref="location"/>
-                </li>
-                <li>
-                  <input type="submit" className="button" value="Find Game"/>
-                </li>
-              </ul>
-            </form>
+            <Header></Header>
         </div>
       </div>
 

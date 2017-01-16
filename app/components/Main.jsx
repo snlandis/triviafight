@@ -35,7 +35,7 @@ export var Main = React.createClass({
 						<LogoLeft />
 					</div>
             <div className="columns medium-6 large-4 small-centered">
-							Final location of chatroom
+							<ChatRoom></ChatRoom>
             </div>
 						<div className="columns medium-3 medium-centered">
 						<LogoRight />
@@ -43,7 +43,6 @@ export var Main = React.createClass({
           </div>
 
         <Footer />
-				<ChatRoom></ChatRoom>
 
       </div>
     );

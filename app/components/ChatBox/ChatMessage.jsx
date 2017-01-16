@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react'
 
 function ChatMessage ({ message }) {
   return (
-    <div className='message-chat row'>
-      <div className='col s2'>
+    <div className=''>
+      <div className=''>
         <img
           width='48px'
           className='circle'

@@ -52,7 +52,7 @@ class ChatRoom extends Component {
           onAuth={this.handleAuth}
           onLogout={this.handleLogout}
         />
-        <div className='message-chat-list'>
+        <div className=''>
           <br/>
           {this.renderMessages()}
         </div>

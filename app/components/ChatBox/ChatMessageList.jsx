@@ -75,7 +75,7 @@ class ChatMessageList extends Component {
   render () {
     return (
       <div>
-        <div className="container chatrow">
+        <div className="">
           {
             this.state.messages.map(msg => (
               <ChatMessage

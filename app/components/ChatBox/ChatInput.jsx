@@ -8,9 +8,9 @@ function ChatInput ({ onSendMessage }) {
   }
 
   return (
-    <form className='page-footer message-input' onSubmit={handleSubmit}>
-      <div className='container row'>
-        <div className='col s9'>
+    <form className='' onSubmit={handleSubmit}>
+      <div className=''>
+        <div className=''>
           <input name='text' type='text' />
         </div>
         <div className='col s3'>

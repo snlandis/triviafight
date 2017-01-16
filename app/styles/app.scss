@@ -174,3 +174,34 @@ input[type=search], input[type=submit]
   justify-content: center;
   align-items: center;
 }
+
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.avatar {
+  position: relative;
+  top: 9px;
+}
+
+.navbar li {
+  margin: 0 0.5em;
+}
+
+.message-chat-list {
+  display: flex;
+  flex-direction: column;
+  margin: 1em auto;
+}
+
+.message-chat {
+  padding: 0.5em;
+  border-bottom: 1px solid #ccc;
+}

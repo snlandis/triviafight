@@ -35,13 +35,16 @@ export var Main = React.createClass({
 						<LogoLeft />
 					</div>
             <div className="columns medium-6 large-4 small-centered">
-							<ChatRoom></ChatRoom>
+							Final location of chatroom
             </div>
 						<div className="columns medium-3 medium-centered">
 						<LogoRight />
 					</div>
           </div>
+
         <Footer />
+				<ChatRoom></ChatRoom>
+
       </div>
     );
   }

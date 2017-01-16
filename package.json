@@ -8,13 +8,16 @@
     "build": "webpack",
     "start": "npm run build && node server.js"
   },
+
   "author": "Kollin Brandenburg, Luke Popwell",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.13.1",
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.5.1",
     "babel-loader": "^6.2.2",
     "babel-preset-es2015": "^6.5.0",
+    "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.3.0",
@@ -22,10 +25,12 @@
     "core-js": "^2.4.1",
     "css-loader": "^0.24.0",
     "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "firebase": "^3.6.5",
     "firechat": "^3.0.1",
     "foundation-sites": "^6.2.3",
+    "html-webpack-plugin": "^2.24.1",
     "http": "0.0.0",
     "jquery": "^2.2.1",
     "moment": "^2.17.1",
@@ -37,6 +42,7 @@
     "normalize.css": "^5.0.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-favicon": "0.0.5",
     "react-redux": "^5.0.2",
     "react-router": "^2.0.0",
     "react-time": "^4.2.0",
@@ -48,9 +54,12 @@
     "simple-websocket": "^4.1.0",
     "socket.io": "^1.7.2",
     "socket.io-client": "^1.7.2",
+    "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
     "ws": "^1.1.1"
+
   },
   "devDependencies": {
     "babel-core": "^6.5.1",

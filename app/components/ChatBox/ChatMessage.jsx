@@ -6,13 +6,13 @@ function ChatMessage ({ message }) {
       <div className=''>
         <img
           width='48px'
-          className='circle'
+          className='avatarimage'
           src={message.avatar}
           alt={message.displayName}
         />
       </div>
-      <div className='col s10'>
-        {message.text}
+      <div className=''>
+        <b>{message.displayName}:</b> {message.text}
       </div>
     </div>
   )

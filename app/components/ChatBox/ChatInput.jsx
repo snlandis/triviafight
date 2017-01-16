@@ -9,11 +9,11 @@ function ChatInput ({ onSendMessage }) {
 
   return (
     <form className='' onSubmit={handleSubmit}>
-      <div className=''>
-        <div className='col s9'>
+      <div className='row align-middle'>
+        <div className='columns'>
           <input name='text' type='text' />
         </div>
-        <div className='col s3'>
+        <div className='small-4 columns'>
           <button className='btn waves-effect waves-light blue darken-1' type='submit'>
             Send
             <i className='material-icons right'>send</i>

@@ -12,7 +12,6 @@ function ChatMessage ({ message }) {
         />
       </div>
       <div className='col s10'>
-        Farting
         {message.text}
       </div>
     </div>

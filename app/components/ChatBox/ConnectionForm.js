@@ -2,8 +2,9 @@ var React = require('react');
 
 module.exports = React.createClass({
   //This is where the name is initially set in the chat form. Change it so that it is initially set to the logged in name from twitter.
+  //From the name from Log in
   getInitialState: () => ({ name: '' }),
-  
+
 
 	updateName: function(ev) {
 		this.setState({

@@ -11,7 +11,6 @@ var ConnectionManager = require('./ConnectionManager');
 var ConnectionForm = require('./ConnectionForm');
 
 
-
 var ChatRoom = React.createClass({
   getInitialState: function() {
 		return {

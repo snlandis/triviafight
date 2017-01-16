@@ -14,7 +14,7 @@ function Header ({ appName, user, onAuth, onLogout }) {
         <li>{user.displayName} Testing Name</li>
         <li>
           <button
-            className='waves-effect waves-light btn blue darken-1'
+            className='hollow button alert'
             onClick={onLogout}
           >
             Logout
@@ -29,7 +29,7 @@ function Header ({ appName, user, onAuth, onLogout }) {
       <ul className='right'>
         <li>
           <button
-            className='waves-effect waves-light btn blue darken-1'
+            className='loginbutton hollow button'
             onClick={onAuth}
           >
             Login

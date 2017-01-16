@@ -10,7 +10,7 @@ function ChatInput ({ onSendMessage }) {
   return (
     <form className='' onSubmit={handleSubmit}>
       <div className=''>
-        <div className=''>
+        <div className='col s9'>
           <input name='text' type='text' />
         </div>
         <div className='col s3'>

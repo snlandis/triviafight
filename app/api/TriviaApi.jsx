@@ -9,7 +9,8 @@ class TriviaApi extends Component {
     this.state = {
 
       question: [],
-      answers: []
+      answers: [],
+      correct_answer: ''
 
     };
   }
@@ -24,7 +25,7 @@ class TriviaApi extends Component {
       const correct = questions[0].correct_answer
       const incorrect = questions[0].incorrect_answers
       let arr1 = [correct, incorrect[0], incorrect[1], incorrect[2]];
-      // console.log(arr1);
+
        arr1 = shuffle(arr1);
       function shuffle(arr1) {
         var currentIndex = arr1.length, temporaryValue, randomIndex;
@@ -41,7 +42,10 @@ class TriviaApi extends Component {
         arr1[currentIndex] = arr1[randomIndex];
         arr1[randomIndex] = temporaryValue;
 
-
+        let first = arr1[0];
+        let second = arr1[1];
+        let third = arr1[2];
+        let fourth = arr1[3];
 
   }
     return arr1;
@@ -71,7 +75,8 @@ var decodeEntities = (function() {
       this.setState({
 
         question: decodeEntities(question1),
-        correct_answer: correct
+        answers: decodeEntities(arr1),
+        correct_answer: decodeEntities(correct)
 
       })
     })
@@ -87,10 +92,10 @@ var decodeEntities = (function() {
       <div className="container">
           <h4>{ this.state.question }</h4>
           <ul>
-            <li>A: {this.state.arr1} </li>
-            <li>B: </li>
-            <li>C: </li>
-            <li>D: </li>
+            <li><button className="button round">A: {this.state.answers[0]}</button></li>
+            <li><button className="button round">B: {this.state.answers[1]}</button></li>
+            <li><button className="button round">C: {this.state.answers[2]}</button></li>
+            <li><button className="button round">D: {this.state.answers[3]}</button></li>
           </ul>
       </div>
     );

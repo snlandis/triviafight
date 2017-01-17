@@ -4,7 +4,7 @@
 
 .usermessages {
   height: 100px;
-  border:2px solid black;
+  // border:2px solid black;
 }
 
 .avatarimage{
@@ -19,5 +19,49 @@
 
 #inputform {
   outline: 1px dashed black;
-  height: 200px;
+  height: 90px;
+}
+
+.2 {
+  background-color: purple;
+}
+
+.3 {
+  background-color: purple;
+}
+
+.4 {
+  background-color: purple;
+}
+
+.5 {
+  background-color: purple;
+}
+
+div.nav-wrapper.container {
+  background-color: purple;
+}
+
+.7 {
+  background-color: purple;
+}
+.8 {
+  background-color: purple;
+}
+
+#UserList {
+  height: 500px;
+  overflow: scroll;
+  outline: black solid thick;
+}
+
+#MessageList {
+  height: 500px;
+  overflow: scroll;
+  outline: black solid thick;
+
+}
+
+#MessageandUserList{
+  padding-bottom: 10px;
 }

@@ -3,7 +3,7 @@ import React from 'react'
 function Header ({ user, onAuth, onLogout }) {
   function renderUserData () {
     return (
-      <ul className='navbar right'>
+      <ul className='7 navbar right'>
         <li>
           <img
             width='32'

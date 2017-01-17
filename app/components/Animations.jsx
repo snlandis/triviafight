@@ -7,11 +7,12 @@ var Animations = React.createClass({
       };
     },
     onClick() {
+
       this.setState({count: this.state.count - 1});
-      if (counter > 0){
-    }
-    else alert("Knockout!");
-  },
+      if (this.state.count <= 0){
+        alert('Knockout!');
+      }
+    },
 
     render() {
       return (

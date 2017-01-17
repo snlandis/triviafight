@@ -1,18 +1,21 @@
 import React, { PropTypes } from 'react'
+import Time from 'react-time'
+
 
 function ChatMessage ({ message }) {
+  let now = message.date
   return (
-    <div className=''>
+    <div className='usermessages'>
       <div className=''>
         <img
           width='48px'
-          className='circle'
+          className='avatarimage'
           src={message.avatar}
           alt={message.displayName}
         />
       </div>
-      <div className='col s10'>
-        {message.text}
+      <div className=''>
+        <Time value={now} format="HH:mm:ss" /> <b>{message.displayName}:</b> {message.text}
       </div>
     </div>
   )

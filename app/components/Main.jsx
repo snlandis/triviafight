@@ -31,13 +31,13 @@ export var Main = React.createClass({
 					<a href="#" onClick={this.onLogout}>Logout</a>
 				</div>
           <div className="row" id="logorow">
-						<div className="columns medium-3 columns small-centered">
+						<div className="columns medium-3 large-2 small-centered">
 						<LogoLeft />
 					</div>
-            <div className="columns medium-6 large-4 small-centered">
+            <div className="columns medium-6  large-8 small-centered">
 							<ChatRoom></ChatRoom>
             </div>
-						<div className="columns medium-3 medium-centered">
+						<div className="columns medium-3 large-2 small-centered">
 						<LogoRight />
 					</div>
           </div>

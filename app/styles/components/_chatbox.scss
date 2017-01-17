@@ -3,5 +3,21 @@
 }
 
 .usermessages {
-  height: 30px;
+  height: 100px;
+  border:2px solid black;
+}
+
+.avatarimage{
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+}
+
+.inputbutton {
+  width: 100%;
+}
+
+#inputform {
+  outline: 1px dashed black;
+  height: 200px;
 }

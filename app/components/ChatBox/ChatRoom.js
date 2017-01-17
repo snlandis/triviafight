@@ -21,8 +21,7 @@ class ChatRoom extends Component {
   }
 
   handleAuth () {
-    const provider = new firebase.auth.GoogleAuthProvider()
-    provider.addScope('https://www.googleapis.com/auth/plus.login')
+    const provider = new firebase.auth.TwitterAuthProvider();
 
     firebase.auth().signInWithPopup(provider)
       .then(result => console.log(`${result.user.email} has started a session.`))

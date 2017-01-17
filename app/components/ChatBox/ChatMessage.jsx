@@ -5,8 +5,8 @@ import Time from 'react-time'
 function ChatMessage ({ message }) {
   let now = message.date
   return (
-    <div className='6 usermessages'>
-      <div className=''>
+    <div className='row 6 usermessages'>
+      <div className='small-2 columns' id="chatavatar">
         <img
           width='48px'
           className='avatarimage'
@@ -14,7 +14,7 @@ function ChatMessage ({ message }) {
           alt={message.displayName}
         />
       </div>
-      <div className='2'>
+      <div className='small-10 columns messagesent triangle-obtuse'>
         <Time value={now} format="HH:mm:ss" /> <b>{message.displayName}:</b> {message.text}
       </div>
     </div>

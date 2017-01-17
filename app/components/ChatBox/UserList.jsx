@@ -22,6 +22,9 @@ function UserList () {
            <li>User 10</li>
          </ul>
        </div>
+       <div>
+         New Users here
+       </div>
     </div>
   )
 }

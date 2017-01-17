@@ -27,16 +27,26 @@ class ChatRoom extends Component {
     firebase.auth().signInWithPopup(provider)
       .then(result => {
         console.log(`${result.user.displayName} has started a session.`)
+        console.log(result.user);
         let newUserAdded = this.messagesDBUL.push()
-        let msg = result.user.displayName
-        newUserAdded.set(msg)
+        let usercreate = {
+          userID:result.user.uid,
+          displayname: result.user.displayName
+        }
+        newUserAdded.set(usercreate)
       })
       .catch(error => console.log(`Error ${error.code}: ${error.message}`))
   }
 
   handleLogout () {
     firebase.auth().signOut()
-      .then(result => console.log('There was a disconnect'))
+      .then(result => {
+        console.log('There was a disconnect')
+        console.log(result.user.displayName);
+        let newUserRemoved = this.messagesDBUL.remove()
+        let msg = result.user.displayName
+        newUserRemoved.set(msg)
+      })
       .catch(error => console.log(`Error ${error.code}: ${error.message}`))
   }
 

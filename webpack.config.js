@@ -63,6 +63,7 @@ module.exports = {
       Footer: 'app/components/Footer.jsx',
       LogoLeft: 'app/components/LogoLeft.jsx',
       LogoRight: 'app/components/LogoRight.jsx',
+      Animations: 'app/components/Animations.jsx',
       Weather: 'app/components/Weather.jsx',
       Challenge: 'app/components/Challenge.jsx',
 			Timer: 'app/components/Timer.jsx',

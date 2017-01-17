@@ -8,6 +8,7 @@ class ChatRoom extends Component {
     super()
     this.handleAuth = this.handleAuth.bind(this)
     this.handleLogout = this.handleLogout.bind(this)
+    this.messagesDBUL = firebase.database().ref(`userlist/`)
   }
 
   state = {
@@ -24,7 +25,12 @@ class ChatRoom extends Component {
     const provider = new firebase.auth.TwitterAuthProvider();
 
     firebase.auth().signInWithPopup(provider)
-      .then(result => console.log(`${result.user.email} has started a session.`))
+      .then(result => {
+        console.log(`${result.user.displayName} has started a session.`)
+        let newUserAdded = this.messagesDBUL.push()
+        let msg = result.user.displayName
+        newUserAdded.set(msg)
+      })
       .catch(error => console.log(`Error ${error.code}: ${error.message}`))
   }
 

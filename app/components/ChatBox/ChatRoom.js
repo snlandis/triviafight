@@ -44,17 +44,19 @@ class ChatRoom extends Component {
 
   render () {
     return (
-      <div>
+      <div className='5'>
         <Header
           appName='Trivia Fight'
           user={this.state.user}
           onAuth={this.handleAuth}
           onLogout={this.handleLogout}
         />
-        <div className=''>
-          <br/>
-          {this.renderMessages()}
+      <div className=''>
+          <div className='4'>
+            {this.renderMessages()}
+          </div>
         </div>
+
       </div>
     )
   }

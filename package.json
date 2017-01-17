@@ -8,7 +8,6 @@
     "build": "webpack",
     "start": "npm run build && node server.js"
   },
-
   "author": "Kollin Brandenburg, Luke Popwell",
   "license": "MIT",
   "dependencies": {
@@ -41,6 +40,7 @@
     "nodemon": "^1.10.2",
     "normalize.css": "^5.0.0",
     "react": "^0.14.7",
+    "react-bootstrap": "^0.30.7",
     "react-dom": "^0.14.7",
     "react-favicon": "0.0.5",
     "react-redux": "^5.0.2",
@@ -59,7 +59,6 @@
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
     "ws": "^1.1.1"
-
   },
   "devDependencies": {
     "babel-core": "^6.5.1",

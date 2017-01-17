@@ -5,7 +5,7 @@
 .usermessages {
   height: 100px;
   display: inline-block;
-  // border:2px solid black;
+  margin: 15px;
 }
 
 
@@ -108,4 +108,11 @@
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
+}
+
+.avatarimage{
+  position: relative !important;
+  top: 44px !important;
+  right: -26px !important;
+  z-index: 1 !important;
 }

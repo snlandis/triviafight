@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import firebase from 'firebase'
 import ChatMessage from './ChatMessage'
 import ChatInput from './ChatInput'
+import UserList from './UserList'
 
 class ChatMessageList extends Component {
   static propTypes = {
@@ -58,19 +59,7 @@ class ChatMessageList extends Component {
             }
           </div>
           <div className='large-3 columns' id="UserList">
-            User List
-             <ul>
-               <li>User 1</li>
-               <li>User 2</li>
-               <li>User 3</li>
-               <li>User 4</li>
-               <li>User 5</li>
-               <li>User 6</li>
-               <li>User 7</li>
-               <li>User 8</li>
-               <li>User 9</li>
-               <li>User 10</li>
-             </ul>
+            <UserList></UserList>
           </div>
         </div>
         <div className="1">

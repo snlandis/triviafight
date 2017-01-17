@@ -3,7 +3,8 @@
 }
 
 .usermessages {
-  height: 100px;
+  height: 75px;
+  display: inline-block;
   // border:2px solid black;
 }
 
@@ -17,36 +18,15 @@
   width: 100%;
 }
 
+.messagesent {
+  background-color: red;
+  left: -25px;
+  position: relative;
+}
+
 #inputform {
   outline: 1px dashed black;
   height: 90px;
-}
-
-.2 {
-  background-color: purple;
-}
-
-.3 {
-  background-color: purple;
-}
-
-.4 {
-  background-color: purple;
-}
-
-.5 {
-  background-color: purple;
-}
-
-div.nav-wrapper.container {
-  background-color: purple;
-}
-
-.7 {
-  background-color: purple;
-}
-.8 {
-  background-color: purple;
 }
 
 #UserList {
@@ -59,9 +39,74 @@ div.nav-wrapper.container {
   height: 500px;
   overflow: scroll;
   outline: black solid thick;
+  background-color: green;
+
 
 }
 
 #MessageandUserList{
   padding-bottom: 10px;
+}
+
+#userlisttitle {
+  width: 100%;
+  outline: black solid thick;
+}
+
+.triangle-obtuse {
+  position:relative;
+  padding:15px;
+  margin:1em 0 3em;
+  color:#fff;
+  background:#c81e2b;
+  /* css3 */
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#f04349), to(#c81e2b));
+  background:-moz-linear-gradient(#f04349, #c81e2b);
+  background:-o-linear-gradient(#f04349, #c81e2b);
+  background:linear-gradient(#f04349, #c81e2b);
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.triangle-obtuse:before {
+  content:"";
+  position:absolute;
+  bottom:-20px; /* value = - border-top-width - border-bottom-width */
+  left:8px; /* controls horizontal position */
+  border:0;
+  border-right-width:30px; /* vary this value to change the angle of the vertex */
+  border-bottom-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :after */
+  border-style:solid;
+  border-color:transparent #c81e2b;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+  -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+.triangle-obtuse:after {
+  content:"";
+  position:absolute;
+  bottom:-20px; /* value = - border-top-width - border-bottom-width */
+  left:8px; /* value = (:before's left) + (:before's border-right/left-width)  - (:after's border-right/left-width) */
+  border:0;
+  border-right-width:10px; /* vary this value to change the angle of the vertex */
+  border-bottom-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :before */
+  border-style:solid;
+  border-color:transparent #fff;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+  -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
 }

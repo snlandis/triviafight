@@ -8,7 +8,6 @@
     "build": "webpack",
     "start": "npm run build && node server.js"
   },
-
   "author": "Kollin Brandenburg, Luke Popwell",
   "license": "MIT",
   "dependencies": {
@@ -23,6 +22,7 @@
     "babelify": "^7.3.0",
     "body-parser": "^1.15.2",
     "core-js": "^2.4.1",
+    "cors": "^2.8.1",
     "css-loader": "^0.24.0",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -59,7 +59,6 @@
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
     "ws": "^1.1.1"
-
   },
   "devDependencies": {
     "babel-core": "^6.5.1",

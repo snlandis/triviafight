@@ -4,6 +4,7 @@ var Nav = require('Nav');
 var Footer = require('Footer');
 var LogoLeft = require('LogoLeft');
 var LogoRight = require('LogoRight');
+var Trivia = require('trivia');
 
 
 import * as Redux from 'react-redux';
@@ -19,6 +20,7 @@ export var Leaderboard = React.createClass({
   },
 
 	render() {
+
   return (
 		<div className="font main">
 			<Nav />
@@ -27,7 +29,7 @@ export var Leaderboard = React.createClass({
 			</div>
 				<div className="row">
 
-
+					<triviaApi />
 						<div className="columns medium-3 columns small-centered">
 						<LogoLeft />
 					</div>

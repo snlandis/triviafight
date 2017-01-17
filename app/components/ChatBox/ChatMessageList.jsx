@@ -45,18 +45,37 @@ class ChatMessageList extends Component {
 
   render () {
     return (
-      <div>
-        <div className="">
-          {
-            this.state.messages.map(msg => (
-              <ChatMessage
-                key={msg.date}
-                message={msg}
-              />
-            )).reverse()
-          }
+      <div className='3'>
+        <div className="row" id="MessageAndUserList">
+          <div className='large-9 columns 2' id="MessageList">
+            {
+              this.state.messages.map(msg => (
+                <ChatMessage
+                  key={msg.date}
+                  message={msg}
+                />
+              )).reverse()
+            }
+          </div>
+          <div className='large-3 columns' id="UserList">
+            User List
+             <ul>
+               <li>User 1</li>
+               <li>User 2</li>
+               <li>User 3</li>
+               <li>User 4</li>
+               <li>User 5</li>
+               <li>User 6</li>
+               <li>User 7</li>
+               <li>User 8</li>
+               <li>User 9</li>
+               <li>User 10</li>
+             </ul>
+          </div>
         </div>
-        <ChatInput onSendMessage={this.handleSendMessage} />
+        <div className="1">
+          <ChatInput onSendMessage={this.handleSendMessage} />
+        </div>
       </div>
     )
   }

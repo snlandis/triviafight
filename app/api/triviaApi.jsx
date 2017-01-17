@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 
-
 class TriviaApi extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +19,7 @@ class TriviaApi extends Component {
 
   componentWillMount() {
     console.log('hi')
-    axios.get('https://www.opentdb.com/api.php?amount=10&type=multiple')
+    axios.get('https://opentdb.com/api.php?amount=10')
     .then(response => {
       console.log(response);
 
@@ -43,7 +42,7 @@ class TriviaApi extends Component {
   render() {
     return (
       <div className="container">
-          triviaAPI
+          <h1> </h1>
       </div>
     );
   }

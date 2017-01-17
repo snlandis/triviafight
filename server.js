@@ -16,6 +16,7 @@ var cors = require('cors')
 var app = express();
 
 
+
 var server = new WebsocketServer({ port: 3001 });
 server.on('connection', function(socket) {
   socket.on('message', function(msg) {
@@ -39,15 +40,8 @@ app.use(function(req, res, next){
 });
 // ALLOW cors
 
-app.use(cors());
 
-app.get('http://localhost:3000', function(req, res, next){
-  res.json({msg: 'This is CORS-enabled for all origins!'});
-});
 
-app.listen(80, function(){
-  console.log('CORS-enabled web server listening on port 80');
-});
 
 // server to use , allows you to use functionality
 app.use(express.static('public'));

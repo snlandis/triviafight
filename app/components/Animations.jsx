@@ -10,7 +10,7 @@ var Animations = React.createClass({
 
       this.setState({count: this.state.count - 1});
       if (this.state.count <= 1){
-        alert('Knockout!');
+        alert('You\'ve been knockout!');
       }
     },
 

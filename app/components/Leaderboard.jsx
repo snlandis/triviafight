@@ -4,7 +4,10 @@ var Nav = require('Nav');
 var Footer = require('Footer');
 var LogoLeft = require('LogoLeft');
 var LogoRight = require('LogoRight');
+<<<<<<< HEAD
 var Trivia = require('trivia');
+=======
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 
 
 import * as Redux from 'react-redux';
@@ -20,7 +23,10 @@ export var Leaderboard = React.createClass({
   },
 
 	render() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
   return (
 		<div className="font main">
 			<Nav />
@@ -29,7 +35,11 @@ export var Leaderboard = React.createClass({
 			</div>
 				<div className="row">
 
+<<<<<<< HEAD
 					<triviaApi />
+=======
+
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 						<div className="columns medium-3 columns small-centered">
 						<LogoLeft />
 					</div>

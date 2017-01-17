@@ -21,6 +21,7 @@ EJS
 This is where the stories go about why people should want to use this app.
 
 #Wireframe
+<<<<<<< HEAD
 Loading Page: ![Loading Page](app/images/Wireframe1.jpg)
 
 Chat Page: ![Chat Page](app/images/Wireframe2.jpg)
@@ -32,6 +33,19 @@ Leaderboard: ![Alt Text](app/images/Wireframe4.jpg)
 Gameboard: ![Alt Text](app/images/Wireframe5.jpg)
 
 Component Layout: ![Alt Text](app/images/ComponentLayout.png)
+=======
+Loading Page: ![Loading Page](/images/Wireframe1.jpg)
+
+Chat Page: ![Chat Page](/images/Wireframe2.jpg)
+
+Challenge Page: ![Alt Text](/images/Wireframe3.jpg)
+
+Leaderboard: ![Alt Text](/images/Wireframe4.jpg)
+
+Gameboard: ![Alt Text](/images/Wireframe5.jpg)
+
+Component Layout: ![Alt Text](/images/ComponentLayout.png)
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 
 ###Component Tree
 * Item 1
@@ -71,5 +85,8 @@ When the app modal pops up, copy the variables and paste them into the correspon
 To run the file in localhost:
 
 ```node server.js```
+<<<<<<< HEAD
 
 This is a test.
+=======
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95

@@ -11,8 +11,11 @@ var Controls = require('Controls');
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
 import router from 'app/router/';
+<<<<<<< HEAD
 import ChatRoom from './ChatBox/ChatRoom';
 
+=======
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 
 
 export var Main = React.createClass({
@@ -31,6 +34,7 @@ export var Main = React.createClass({
 					<a href="#" onClick={this.onLogout}>Logout</a>
 				</div>
           <div className="row" id="logorow">
+<<<<<<< HEAD
 						<div className="columns medium-3 large-2 small-centered">
 						<LogoLeft />
 					</div>
@@ -44,6 +48,19 @@ export var Main = React.createClass({
 
         <Footer />
 
+=======
+						<div className="columns medium-3 columns small-centered">
+						<LogoLeft />
+					</div>
+            <div className="columns medium-6 large-4 small-centered">
+							<Countdown />
+            </div>
+						<div className="columns medium-3 medium-centered">
+						<LogoRight />
+					</div>
+          </div>
+        <Footer />
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
       </div>
     );
   }

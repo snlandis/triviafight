@@ -4,8 +4,11 @@ var Nav = require('Nav');
 var Footer = require('Footer');
 var LogoLeft = require('LogoLeft');
 var LogoRight = require('LogoRight');
+<<<<<<< HEAD
 var axios = require('axios');
 import TriviaApi from '../api/triviaApi'
+=======
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 
 
 import * as Redux from 'react-redux';
@@ -20,12 +23,17 @@ export var Gameroom = React.createClass({
     dispatch(actions.startLogout());
   },
 
+<<<<<<< HEAD
 
 
   render() {
 		console.log(TriviaApi)
 
 		return (
+=======
+  render() {
+    return (
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 			<div className="font main">
         <Nav />
 				<div className="page-actions">
@@ -36,7 +44,11 @@ export var Gameroom = React.createClass({
 						<LogoLeft />
 					</div>
             <div className="columns medium-6 large-4 small-centered">
+<<<<<<< HEAD
 							<TriviaApi />
+=======
+							<p>lots of words and shit goes here.....</p>
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
             </div>
 						<div className="columns medium-3 medium-centered">
 						<LogoRight />

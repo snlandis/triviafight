@@ -10,6 +10,7 @@ const INDEX = __dirname + '/index.html';
 
 
 var userController = require('./server/controllers/user-controller.js');
+<<<<<<< HEAD
 var WebsocketServer = require('ws').Server;
 var cors = require('cors')
 
@@ -29,6 +30,9 @@ server.on('connection', function(socket) {
     });
   });
 });
+=======
+
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 
 // CHECK IF THE TRAFFIC IS ON HTTP or convert to HTTP
 app.use(function(req, res, next){
@@ -38,9 +42,12 @@ app.use(function(req, res, next){
     next();
   }
 });
+<<<<<<< HEAD
 // ALLOW cors
 
 
+=======
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 
 
 // server to use , allows you to use functionality
@@ -50,6 +57,12 @@ app.listen(PORT, function(){
   console.log('Express server is up on port ' + PORT);
 });
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 

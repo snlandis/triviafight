@@ -23,8 +23,13 @@ firebaseRef.set({
 	},
 	isRunning: true,
 	user: {
+<<<<<<< HEAD
 		firstName: 'Burgin',
 		lastName: 'Hard'
+=======
+		firstName: 'Luke',
+		lastName: 'Popwell'
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 	}
 });
 

@@ -12,8 +12,11 @@
 @import "components/footer";
 @import "components/logos";
 @import "components/leaderboard";
+<<<<<<< HEAD
 @import "components/chatbox";
 
+=======
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95
 
 
 $space-30: 30px;
@@ -174,6 +177,7 @@ input[type=search], input[type=submit]
   justify-content: center;
   align-items: center;
 }
+<<<<<<< HEAD
 
 .page-footer {
   position: fixed;
@@ -205,3 +209,5 @@ input[type=search], input[type=submit]
   padding: 0.5em;
   border-bottom: 1px solid #ccc;
 }
+=======
+>>>>>>> caef5507b76d8314c6dcf8a7b30304f93e5bfa95

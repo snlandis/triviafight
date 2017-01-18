@@ -4,6 +4,8 @@ var Nav = require('Nav');
 var Footer = require('Footer');
 var LogoLeft = require('LogoLeft');
 var LogoRight = require('LogoRight');
+var Buttoner = require('Buttoner');
+// var Animations = require('Animations');
 
 
 import * as Redux from 'react-redux';
@@ -31,11 +33,13 @@ export var Gameroom = React.createClass({
 					</div>
             <div className="columns medium-6 large-4 small-centered">
 							<p>lots of words and shit goes here.....</p>
+							<Buttoner />
             </div>
 						<div className="columns medium-3 medium-centered">
 						<LogoRight />
 					 </div>
           </div>
+
         <Footer  />
       </div>
     );

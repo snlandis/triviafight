@@ -10,7 +10,9 @@ class TriviaApi extends Component {
 
       question: [],
       answers: [],
-      correct_answer: []
+      answers2: [],
+      correct_answer: '',
+      type: []
 
     };
   }
@@ -24,7 +26,10 @@ class TriviaApi extends Component {
       const question1 = questions[0].question
       const correct = questions[0].correct_answer
       const incorrect = questions[0].incorrect_answers
+      const qtype = questions[0].type
+
       let arr1 = [correct, incorrect[0], incorrect[1], incorrect[2]];
+      let arr2 = [correct, incorrect[0]];
 
        arr1 = shuffle(arr1);
       function shuffle(arr1) {
@@ -43,8 +48,31 @@ class TriviaApi extends Component {
         arr1[randomIndex] = temporaryValue;
 
 
+
   }
     return arr1;
+
+}
+arr2 = shuffle(arr2);
+function shuffle(arr2) {
+ var currentIndex = arr1.length, temporaryValue, randomIndex;
+
+// While there remain elements to shuffle...
+ while (0 !== currentIndex) {
+
+// Pick a remaining element...
+ randomIndex = Math.floor(Math.random() * currentIndex);
+ currentIndex -= 1;
+
+// And swap it with the current element.
+ temporaryValue = arr2[currentIndex];
+ arr2[currentIndex] = arr2[randomIndex];
+ arr2[randomIndex] = temporaryValue;
+
+
+
+}
+return arr2;
 
 }
 var decodeEntities = (function() {
@@ -61,19 +89,22 @@ var decodeEntities = (function() {
       element.textContent = '';
     }
 
+
     return str;
   }
 
   return decodeHTMLEntities;
 })();
 
-
+console.log(arr2);
 
       this.setState({
 
         question: decodeEntities(question1),
         answers: decodeEntities(arr1),
-        correct_answer: decodeEntities(correct)
+        correct_answer: decodeEntities(correct),
+        type: qtype,
+        answers2: arr2
 
       })
     })
@@ -88,10 +119,20 @@ var decodeEntities = (function() {
       <div className="container">
           <h4>{ this.state.question }</h4>
           <ul>
-            <li><button className="button round">A: {this.state.answers[0]}</button></li>
-            <li><button className="button round">B: {this.state.answers[1]}</button></li>
-            <li><button className="button round">C: {this.state.answers[2]}</button></li>
-            <li><button className="button round">D: {this.state.answers[3]}</button></li>
+            {
+            this.state.type === "boolean"  ?
+            <div>
+              <li><button className="button round">A. {this.state.answers2[0]}</button></li>
+              <li><button className="button round">B. {this.state.answers2[1]}</button></li>
+            </div>
+            :
+            <div>
+              <li><button className="button round">A. {this.state.answers[0]}</button></li>
+              <li><button className="button round">B. {this.state.answers[1]}</button></li>
+              <li><button className="button round">C. {this.state.answers[2]}</button></li>
+              <li><button className="button round">D. {this.state.answers[3]}</button></li>
+            </div>
+          }
           </ul>
       </div>
     );

@@ -104,7 +104,7 @@ console.log(arr2);
         answers: decodeEntities(arr1),
         correct_answer: decodeEntities(correct),
         type: qtype,
-        answers2: arr2
+        answers2: arr2.filter(Boolean)
 
       })
     })

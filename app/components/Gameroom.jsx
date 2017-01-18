@@ -4,9 +4,9 @@ var Nav = require('Nav');
 var Footer = require('Footer');
 var LogoLeft = require('LogoLeft');
 var LogoRight = require('LogoRight');
-var Buttoner = require('Buttoner');
+var axios = require('axios');
+import TriviaApi from '../api/triviaApi'
 
-// var Animations = require('Animations');
 
 
 import * as Redux from 'react-redux';
@@ -14,7 +14,7 @@ import * as actions from 'actions';
 import router from 'app/router/';
 
 export var Gameroom = React.createClass({
-	onLogout(e) {
+    onLogout(e) {
     var {dispatch} = this.props;
     e.preventDefault();
 
@@ -22,24 +22,25 @@ export var Gameroom = React.createClass({
   },
 
 
+
   render() {
     return (
-			<div className="font main">
+            <div className="font main">
         <Nav />
-				<div className="page-actions">
-					<a href="#" onClick={this.onLogout}>Logout</a>
-				</div>
-					<div className="row">
-						<div className="columns medium-3 columns small-centered">
-						<LogoLeft />
-					</div>
+                <div className="page-actions">
+                    <a href="#" onClick={this.onLogout}>Logout</a>
+                </div>
+                    <div className="row">
+                        <div className="columns medium-3 columns small-centered">
+                        <LogoLeft />
+                    </div>
             <div className="columns medium-6 large-4 small-centered">
-							<p>lots of words and shit goes here.....</p>
-							<Buttoner />
+                            <TriviaApi />
+
             </div>
-						<div className="columns medium-3 medium-centered">
-						<LogoRight />
-					 </div>
+                        <div className="columns medium-3 medium-centered">
+                        <LogoRight />
+                     </div>
           </div>
 
         <Footer  />

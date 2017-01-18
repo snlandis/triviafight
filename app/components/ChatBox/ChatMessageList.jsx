@@ -3,6 +3,7 @@ import firebase from 'firebase'
 import ChatMessage from './ChatMessage'
 import ChatInput from './ChatInput'
 import UserList from './UserList'
+import ChatModal from './ChatModal'
 
 class ChatMessageList extends Component {
   static propTypes = {
@@ -53,12 +54,23 @@ class ChatMessageList extends Component {
     console.log(msg);
   }
 
-  render () {
+  userModal () {
+    console.log("Heck yea");
+    return (
+      <ChatModal />
+    )
+  }
+
+  userSend () {
     if (localStorage.displayName === "Bob Barker"){
       console.log("Hi Kollin");
     } else {
       console.log("who are you");
     }
+  }
+
+  render () {
+
     return (
       <div className='3'>
         <div className="row" id="MessageAndUserList">
@@ -66,6 +78,7 @@ class ChatMessageList extends Component {
             {
               this.state.messages.map(msg => (
                 <ChatMessage
+                  userSend={this.userSend}
                   key={msg.date}
                   message={msg}
                 />
@@ -80,6 +93,7 @@ class ChatMessageList extends Component {
               this.state.users.map(msg => (
                 <UserList
                   message={msg}
+                  userModal={this.userModal}
                 />
               )).reverse()
             }

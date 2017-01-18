@@ -26,8 +26,10 @@
 }
 
 #inputform {
-  outline: 1px dashed black;
+  outline: black solid thick;
   height: 90px;
+  position: relative;
+  bottom: -5px;
 }
 
 #UserList {

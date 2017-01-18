@@ -2,12 +2,12 @@ import React, { PropTypes } from 'react'
 import Time from 'react-time'
 
 
-function UserList ({ message }) {
+function UserList ({ message, userModal }) {
+
   let displaynames = message.displayName
-  console.log(displaynames);
   return (
     <div>
-      <div className="row">
+      <div className="row" onClick={userModal}>
          {message.displayName}
        </div>
     </div>

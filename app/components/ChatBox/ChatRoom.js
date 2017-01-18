@@ -3,6 +3,7 @@ import firebase from 'firebase'
 import Header from './Header'
 import ChatMessageList from './ChatMessageList'
 
+
 class ChatRoom extends Component {
 
   constructor () {
@@ -100,7 +101,6 @@ class ChatRoom extends Component {
             {this.renderMessages()}
           </div>
         </div>
-
       </div>
     )
   }

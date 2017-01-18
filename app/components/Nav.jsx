@@ -20,29 +20,30 @@ var Nav = React.createClass({
 
   render() {
     return(
-      <div className="top-bar">
+<div>
+			<div className="title-bar" id="navbar" data-responsive-toggle="example-menu" data-hide-for="medium">
+			</div>
+
+      <nav className="top-bar" role="navigation">
         <div className="top-bar-left">
-          <div className="menu">
-            <div>
+          <ul className="small-block-grid-4" data-dropdown-menu>
+            <li>
               <Link to="/main" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Trivia Fight</Link>
-            </div>
-            <div>
+            </li>
+            <li>
               <Link to="/challenge" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Challenge</Link>
-            </div>
-            <div>
+            </li>
+            <li>
               <Link to="/leaderboard" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Leaderboard</Link>
-            </div>
-						<div>
+            </li>
+						<li>
               <Link to="/gameroom" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Game Room</Link>
-            </div>
+            </li>
+					</ul>
 
-         </div>
         </div>
-        <div className="top-bar-right">
-            {/* <Header></Header> */}
-        </div>
-      </div>
-
+      </nav>
+		</div>
     );
   }
 });

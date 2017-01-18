@@ -23,7 +23,6 @@ export var Gameroom = React.createClass({
 
 
 
-
   render() {
     return (
             <div className="font main">
@@ -37,11 +36,13 @@ export var Gameroom = React.createClass({
                     </div>
             <div className="columns medium-6 large-4 small-centered">
                             <TriviaApi />
+
             </div>
                         <div className="columns medium-3 medium-centered">
                         <LogoRight />
                      </div>
           </div>
+
         <Footer  />
       </div>
     );

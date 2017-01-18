@@ -63,11 +63,13 @@ module.exports = {
       Footer: 'app/components/Footer.jsx',
       LogoLeft: 'app/components/LogoLeft.jsx',
       LogoRight: 'app/components/LogoRight.jsx',
+      Buttoner: 'app/components/Buttoner.jsx',
       Weather: 'app/components/Weather.jsx',
       Challenge: 'app/components/Challenge.jsx',
 			Timer: 'app/components/Timer.jsx',
 			CountdownForm: 'app/components/CountdownForm.jsx',
 			Countdown: 'app/components/Countdown.jsx',
+      Animations: 'app/components/Animations.jsx',
 			Controls: 'app/components/Controls.jsx',
 			Clock: 'app/components/Clock.jsx',
       Examples: 'app/components/Examples.jsx',
@@ -81,7 +83,8 @@ module.exports = {
 			actions: 'app/actions/actions.jsx',
 			reducers: 'app/reducers/reducers.jsx',
 			configureStore: 'app/store/configureStore.jsx',
-      TriviaApi: 'app/api/TriviaApi'
+      TriviaApi: 'app/api/TriviaApi',
+			Gifs: 'app/components/gifs.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

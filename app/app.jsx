@@ -15,6 +15,8 @@ var Challenge = require('Challenge');
 var Timer = require('Timer');
 var Countdown = require('Countdown');
 var Gameroom = require('Gameroom');
+var ErrorModal = require('ErrorModal');
+
 
 var actions = require('actions');
 var store = require('configureStore').configure();

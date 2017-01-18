@@ -21,6 +21,7 @@ export var Gameroom = React.createClass({
     dispatch(actions.startLogout());
   },
 
+
   render() {
     return (
 			<div className="font main">

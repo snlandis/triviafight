@@ -20,6 +20,7 @@ class ChatMessageList extends Component {
 
   state = {
     messages: [],
+    users: [],
     count: 0
   }
 
@@ -27,6 +28,11 @@ class ChatMessageList extends Component {
     this.messagesDB.on('child_added', snap => {
       this.setState({
         messages: this.state.messages.concat(snap.val())
+      })
+    })
+    this.messagesDBUL.on('child_added', snap => {
+      this.setState({
+        users: this.state.users.concat(snap.val())
       })
     })
   }
@@ -44,9 +50,15 @@ class ChatMessageList extends Component {
       date: Date.now()
     }
     newUserMessage.set(msg)
+    console.log(msg);
   }
 
   render () {
+    if (localStorage.displayName === "Bob Barker"){
+      console.log("Hi Kollin");
+    } else {
+      console.log("who are you");
+    }
     return (
       <div className='3'>
         <div className="row" id="MessageAndUserList">
@@ -61,7 +73,16 @@ class ChatMessageList extends Component {
             }
           </div>
           <div className='large-3 columns' id="UserList">
-            <UserList></UserList>
+            <div className="row" id="userlisttitle">
+              User List
+            </div>
+            {
+              this.state.users.map(msg => (
+                <UserList
+                  message={msg}
+                />
+              )).reverse()
+            }
           </div>
         </div>
         <div className="1">

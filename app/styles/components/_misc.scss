@@ -1,41 +1,3 @@
-@import "base/variables";
-
-//foundation
-@import "base/foundation-settings";
-@import "foundation";
-@include foundation-everything;
-
-//Components
-@import "components/clock";
-@import "components/controls";
-@import "components/gameroom";
-@import "components/footer";
-@import "components/logos";
-@import "components/leaderboard";
-@import "components/chatbox";
-@import "components/animations";
-@import "components/misc";
-@import "components/navbar";
-@import "components/chat-login-header";
-
-
-
-$space-30: 30px;
-$page-title-color: rgba(234,191,134,1);
-//Part 1
-
-
-
-
-//this .row is causing some CSS functions to not work
-// .row
-// {
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
-
-
-
 .page-title
 {
   color:$page-title-color;
@@ -83,6 +45,7 @@ input[type=search], input[type=submit]
 .top-bar ul
 {
   background-color: transparent !important;
+	margin: 0px;
 }
 
 .row
@@ -93,10 +56,10 @@ input[type=search], input[type=submit]
 
 }
 
-.top-bar-left
-{
-  width: 50% !important;
+.top-bar .top-bar-left, .top-bar .top-bar-right {
+	width: 100%;
 }
+
 .menu
 {
   float: left;
@@ -112,9 +75,9 @@ input[type=search], input[type=submit]
   width: 25%;
 }
 @media(max-width:962px){
-  .top-bar-left, .top-bar-right
+  .top-bar-left
   {
-    width: 100% !important
+    width: 100%;
   }
   .top-bar-right
   {
@@ -186,11 +149,6 @@ input[type=search], input[type=submit]
   bottom: 0;
   width: 100%;
   padding: 1em;
-}
-
-.avatar {
-  position: relative;
-  top: 9px;
 }
 
 .navbar li {

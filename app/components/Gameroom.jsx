@@ -5,6 +5,7 @@ var Footer = require('Footer');
 var LogoLeft = require('LogoLeft');
 var LogoRight = require('LogoRight');
 var Buttoner = require('Buttoner');
+var Gifs = require('Gifs');
 // var Animations = require('Animations');
 
 
@@ -39,7 +40,7 @@ export var Gameroom = React.createClass({
 						<LogoRight />
 					 </div>
           </div>
-
+					<div className="gifs"><Gifs /></div>
         <Footer  />
       </div>
     );

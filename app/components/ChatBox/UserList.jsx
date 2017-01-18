@@ -4,7 +4,6 @@ import Time from 'react-time'
 
 function UserList ({ message, userModal }) {
   let displaynames = message.displayName
-  console.log(displaynames);
   return (
     <div>
       <div className="row" onClick={userModal}>

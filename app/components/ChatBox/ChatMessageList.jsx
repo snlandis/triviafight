@@ -3,7 +3,6 @@ import firebase from 'firebase'
 import ChatMessage from './ChatMessage'
 import ChatInput from './ChatInput'
 import UserList from './UserList'
-import ChatModal from './ChatModal'
 
 class ChatMessageList extends Component {
   static propTypes = {
@@ -56,9 +55,6 @@ class ChatMessageList extends Component {
 
   userModal () {
     console.log("Heck yea");
-    return (
-      <ChatModal />
-    )
   }
 
   userSend () {

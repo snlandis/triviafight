@@ -3,12 +3,14 @@ import firebase from 'firebase'
 import Header from './Header'
 import ChatMessageList from './ChatMessageList'
 
+
 class ChatRoom extends Component {
   constructor () {
     super()
     this.handleAuth = this.handleAuth.bind(this)
     this.handleLogout = this.handleLogout.bind(this)
     this.messagesDBUL = firebase.database().ref().child("userlist")
+    this.userRemove = this.userRemove.bind(this)
   }
 
   state = {
@@ -23,7 +25,6 @@ class ChatRoom extends Component {
 
   handleAuth () {
     const provider = new firebase.auth.TwitterAuthProvider();
-
     firebase.auth().signInWithPopup(provider)
       .then(result => {
         console.log(`${result.user.displayName} has started a session.`)
@@ -40,12 +41,15 @@ class ChatRoom extends Component {
     firebase.auth().signOut()
       .then(result => {
         console.log('There was a disconnect')
-        console.log(result.user.displayName);
         let newUserRemoved = this.messagesDBUL.remove()
         let msg = result.user.displayName
         newUserRemoved.set(msg)
       })
       .catch(error => console.log(`Error ${error.code}: ${error.message}`))
+  }
+
+  userRemove () {
+    console.log("Hello");
   }
 
   renderMessages () {
@@ -63,7 +67,7 @@ class ChatRoom extends Component {
           appName='Trivia Fight'
           user={this.state.user}
           onAuth={this.handleAuth}
-          onLogout={this.handleLogout}
+          onLogout={this.userRemove}
         />
       <div className=''>
           <div className='4'>

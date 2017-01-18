@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header ({ user, onAuth, onLogout }) {
+function Header ({ user, onAuth, userRemove }) {
   function renderUserData () {
     return (
       <ul className='7 navbar right'>
@@ -15,7 +15,7 @@ function Header ({ user, onAuth, onLogout }) {
         <li>
           <button
             className='hollow button alert'
-            onClick={onLogout}
+            onClick={userRemove}
           >
             Logout
           </button>

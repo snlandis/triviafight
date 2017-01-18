@@ -8,7 +8,7 @@ class ChatRoom extends Component {
     super()
     this.handleAuth = this.handleAuth.bind(this)
     this.handleLogout = this.handleLogout.bind(this)
-    this.messagesDBUL = firebase.database().ref(`userlist/`)
+    this.messagesDBUL = firebase.database().ref().child("userlist")
   }
 
   state = {
@@ -28,12 +28,10 @@ class ChatRoom extends Component {
       .then(result => {
         console.log(`${result.user.displayName} has started a session.`)
         console.log(result.user);
-        let newUserAdded = this.messagesDBUL.push()
-        let usercreate = {
-          userID:result.user.uid,
-          displayname: result.user.displayName
-        }
-        newUserAdded.set(usercreate)
+        let newUserAdded = this.messagesDBUL;
+        newUserAdded.child(result.user.uid).set({
+          displayName: result.user.displayName
+        })
       })
       .catch(error => console.log(`Error ${error.code}: ${error.message}`))
   }

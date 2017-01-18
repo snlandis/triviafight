@@ -4,6 +4,7 @@ import Header from './Header'
 import ChatMessageList from './ChatMessageList'
 
 class ChatRoom extends Component {
+
   constructor () {
     super()
     this.handleAuth = this.handleAuth.bind(this)
@@ -11,6 +12,8 @@ class ChatRoom extends Component {
     this.messagesDBUL = firebase.database().ref().child("userlist")
     this.userRemove = this.userRemove.bind(this)
     this.totalUserRemove = this.totalUserRemove.bind(this)
+    this.firebaseRef = firebase.database().ref();
+
   }
 
   state = {
@@ -30,6 +33,8 @@ class ChatRoom extends Component {
       .then(result => {
         console.log(`${result.user.displayName} has started a session.`)
         console.log(result.user);
+        localStorage.setItem('uid', result.user.uid)
+        console.log(localStorage.uid);
         let newUserAdded = this.messagesDBUL;
         newUserAdded.child(result.user.uid).set({
           displayName: result.user.displayName
@@ -51,12 +56,17 @@ class ChatRoom extends Component {
   }
 
   userRemove() {
-    console.log("Hello");
+    console.log("checking credentials ");
+    const personalUID = localStorage.uid
+    console.log(personalUID);
+    const variable = 'userlist/'+personalUID
+    console.log(variable);
+    this.firebaseRef.child(variable).remove();
   }
 
   totalUserRemove(){
     this.userRemove();
-    console.log("Goodbye");
+    this.handleLogout();
   }
 
   renderMessages () {

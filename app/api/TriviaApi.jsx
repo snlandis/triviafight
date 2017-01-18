@@ -10,7 +10,7 @@ class TriviaApi extends Component {
 
       question: [],
       answers: [],
-      correct_answer: ''
+      correct_answer: []
 
     };
   }
@@ -42,10 +42,6 @@ class TriviaApi extends Component {
         arr1[currentIndex] = arr1[randomIndex];
         arr1[randomIndex] = temporaryValue;
 
-        let first = arr1[0];
-        let second = arr1[1];
-        let third = arr1[2];
-        let fourth = arr1[3];
 
   }
     return arr1;
@@ -72,6 +68,7 @@ var decodeEntities = (function() {
 })();
 
 
+
       this.setState({
 
         question: decodeEntities(question1),
@@ -84,7 +81,6 @@ var decodeEntities = (function() {
       console.log('Error: ', error);
     });
   }
-
 
 
   render() {

@@ -5,7 +5,7 @@
 .usermessages {
   height: 100px;
   display: inline-block;
-  // border:2px solid black;
+  margin: 15px;
 }
 
 
@@ -70,11 +70,11 @@
 .triangle-obtuse:before {
   content:"";
   position:absolute;
-  bottom:-20px; /* value = - border-top-width - border-bottom-width */
-  left:8px; /* controls horizontal position */
+  bottom: -19px;/* value = - border-top-width - border-bottom-width */
+  left: 0px;   /* value = - border-top-width - border-bottom-width */
   border:0;
-  border-right-width:30px; /* vary this value to change the angle of the vertex */
-  border-bottom-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :after */
+  border-right-width:40px; /* vary this value to change the angle of the vertex */
+  border-bottom-width:27px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :after */
   border-style:solid;
   border-color:transparent #c81e2b;
   /* reduce the damage in FF3.0 */
@@ -92,8 +92,8 @@
 .triangle-obtuse:after {
   content:"";
   position:absolute;
-  bottom:-20px; /* value = - border-top-width - border-bottom-width */
-  left:8px; /* value = (:before's left) + (:before's border-right/left-width)  - (:after's border-right/left-width) */
+  bottom:-19px; /* value = - border-top-width - border-bottom-width */
+  left:0px; /* value = (:before's left) + (:before's border-right/left-width)  - (:after's border-right/left-width) */
   border:0;
   border-right-width:10px; /* vary this value to change the angle of the vertex */
   border-bottom-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :before */
@@ -108,4 +108,11 @@
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
+}
+
+.avatarimage{
+  position: relative !important;
+  top: 44px !important;
+  right: -19px !important;
+  z-index: 1 !important;
 }

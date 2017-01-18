@@ -14,6 +14,8 @@ class ChatMessageList extends Component {
     this.messagesDB = firebase.database().ref(`messages/`)
   /*  this is the original string this.messagesDB = firebase.database().ref(`messages/${this.props.user.uid}`) */
     this.handleSendMessage = this.handleSendMessage.bind(this)
+    this.messagesDBUL = firebase.database().ref(`userlist/`)
+
   }
 
   state = {

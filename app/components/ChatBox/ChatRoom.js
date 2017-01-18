@@ -8,6 +8,9 @@ class ChatRoom extends Component {
     super()
     this.handleAuth = this.handleAuth.bind(this)
     this.handleLogout = this.handleLogout.bind(this)
+    this.messagesDBUL = firebase.database().ref().child("userlist")
+    this.userRemove = this.userRemove.bind(this)
+    this.totalUserRemove = this.totalUserRemove.bind(this)
   }
 
   state = {
@@ -24,14 +27,36 @@ class ChatRoom extends Component {
     const provider = new firebase.auth.TwitterAuthProvider();
 
     firebase.auth().signInWithPopup(provider)
-      .then(result => console.log(`${result.user.email} has started a session.`))
+      .then(result => {
+        console.log(`${result.user.displayName} has started a session.`)
+        console.log(result.user);
+        let newUserAdded = this.messagesDBUL;
+        newUserAdded.child(result.user.uid).set({
+          displayName: result.user.displayName
+        })
+      })
       .catch(error => console.log(`Error ${error.code}: ${error.message}`))
   }
 
   handleLogout () {
     firebase.auth().signOut()
-      .then(result => console.log('There was a disconnect'))
+      .then(result => {
+        console.log('There was a disconnect')
+        console.log(result.user.displayName);
+        let newUserRemoved = this.messagesDBUL.remove()
+        let msg = result.user.displayName
+        newUserRemoved.set(msg)
+      })
       .catch(error => console.log(`Error ${error.code}: ${error.message}`))
+  }
+
+  userRemove() {
+    console.log("Hello");
+  }
+
+  totalUserRemove(){
+    this.userRemove();
+    console.log("Goodbye");
   }
 
   renderMessages () {
@@ -49,7 +74,7 @@ class ChatRoom extends Component {
           appName='Trivia Fight'
           user={this.state.user}
           onAuth={this.handleAuth}
-          onLogout={this.handleLogout}
+          onLogout={this.totalUserRemove}
         />
       <div className=''>
           <div className='4'>

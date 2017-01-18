@@ -15,7 +15,9 @@ function ChatMessage ({ message }) {
         />
       </div>
       <div className='small-10 columns messagesent triangle-obtuse'>
-        <Time value={now} format="HH:mm:ss" /> <b>{message.displayName}:</b> {message.text}
+        <Time value={now} format="HH:mm:ss" /> <b>{message.displayName}:</b>
+        <br></br>
+        {message.text}
       </div>
     </div>
   )

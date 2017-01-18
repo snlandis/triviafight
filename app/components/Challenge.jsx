@@ -11,12 +11,16 @@ import router from 'app/router/';
 
 
 export var Challenge = React.createClass({
-	onLogout(e) {
-    var {dispatch} = this.props;
-    e.preventDefault();
+	// onLogout(e) {
+  //   var {dispatch} = this.props;
+  //   e.preventDefault();
+	//
+  //   dispatch(actions.startLogout());
+  // },
 
-    dispatch(actions.startLogout());
-  },
+	handleClick (e) {
+		e.preventDefault();
+	},
 
   render() {
     return(
@@ -44,7 +48,7 @@ export var Challenge = React.createClass({
 												</label>
 											</div>
 										</div>
-										<button className='hollow button alert' id="challenge-btn">
+										<button className='hollow button alert' id="challenge-btn" onClick={this.submit}>
 					            Challenge
 					          </button>
 										</form>

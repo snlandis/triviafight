@@ -39,7 +39,7 @@ var Nav = React.createClass({
          </div>
         </div>
         <div className="top-bar-right">
-            <Header></Header>
+            {/* <Header></Header> */}
         </div>
       </div>
 

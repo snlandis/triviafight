@@ -12,7 +12,8 @@ class TriviaApi extends Component {
       answers: [],
       answers2: [],
       correct_answer: '',
-      type: []
+      type: [],
+      category: []
 
     };
   }
@@ -27,6 +28,7 @@ class TriviaApi extends Component {
       const correct = questions[0].correct_answer
       const incorrect = questions[0].incorrect_answers
       const qtype = questions[0].type
+      const category = questions[0].category
 
       let arr1 = [correct, incorrect[0], incorrect[1], incorrect[2]];
       let arr2 = [correct, incorrect[0]];
@@ -104,7 +106,8 @@ console.log(arr2);
         answers: decodeEntities(arr1),
         correct_answer: decodeEntities(correct),
         type: qtype,
-        answers2: arr2.filter(Boolean)
+        answers2: arr2.filter(Boolean),
+        category: decodeEntities(category)
 
       })
     })
@@ -117,7 +120,8 @@ console.log(arr2);
   render() {
     return (
       <div className="container">
-          <h4>{ this.state.question }</h4>
+          <h2>{ this.state.category }</h2>
+          <p>{ this.state.question }</p>
           <ul>
             {
             this.state.type === "boolean"  ?

@@ -4,10 +4,10 @@ var Gifs = React.createClass({
   render : function(){
     return (
       <div className="gifs">
-				<img src="app/images/gifs/colorswap-2.gif" />
-				<img src="app/images/gifs/colorswap-3.gif" />
-				<img src="app/images/gifs/colorswap-4.gif" />
-				<img src="app/images/gifs/colorswap-5.gif" />
+				<img src="app/images/gifs/colorswap-2.gif" className="ryu"/>
+				<img src="app/images/gifs/colorswap-3.gif" className="ryu"/>
+				<img src="app/images/gifs/colorswap-4.gif" className="ryu"/>
+				<img src="app/images/gifs/colorswap-5.gif" className="ryu"/>
 				<img src="app/images/gifs/colorswap-6.gif" />
 				<img src="app/images/gifs/colorswap-7.gif" />
 				<img src="app/images/gifs/colorswap-8.gif" />

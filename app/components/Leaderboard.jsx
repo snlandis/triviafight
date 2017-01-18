@@ -33,14 +33,16 @@ export var Leaderboard = React.createClass({
 					</div>
 					<div className="columns medium-6 large-4 small-centered">
 						<h1 className="text-center page-title font">Leaderboard</h1>
-						<div class="row">
-							<div class="large-12 columns medium-centered">
+						<div className="row">
+							<div className="large-12 columns medium-centered">
 
 
 						 <table>
+							 <caption>Current Standings</caption>
 									<thead>
+
+
 									<tr>
-								<caption>Current Standings</caption>
 
 									<th></th>
 									<th>User</th>
@@ -115,14 +117,7 @@ export var Leaderboard = React.createClass({
 								</div>
 							</div>
 
-							<ul>
-								<li>
-									<a href="https://facebook.github.io/react">React</a> - This was the Javascript framework used produced by Facebook.
-								</li>
-								<li>
-									<a href="http://openweathermap.org">Open Weather Map</a> - This is the API used in order to get weather updates.
-								</li>
-							</ul>
+						
 					</div>
 						<div className="columns medium-3 medium-centered">
 							<LogoRight />

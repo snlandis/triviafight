@@ -3,6 +3,7 @@ import Time from 'react-time'
 
 
 function UserList ({ message, userModal }) {
+
   let displaynames = message.displayName
   return (
     <div>

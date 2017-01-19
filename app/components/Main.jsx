@@ -27,7 +27,6 @@ export var Main = React.createClass({
       <div className="font main">
         <Nav />
 				<div className="page-actions">
-					<a href="#" onClick={this.onLogout}>Logout</a>
 				</div>
           <div className="row" id="logorow">
 						<div className="columns medium-3 large-2 small-centered">

@@ -10,6 +10,9 @@ import Buttoner from './Buttoner'
 import TriviaApi from '../api/triviaApi'
 import TriviaComponent from './GameRoom/TriviaComponent'
 import '../../index.css'
+import Ken from './Ken'
+import Ryu from './Ryu'
+
 
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
@@ -43,7 +46,9 @@ export var Gameroom = React.createClass({
             <LogoRight/>
           </div>
         </div>
-
+				<div>
+				<Ken />
+			</div>
         <Footer/>
       </div>
     );

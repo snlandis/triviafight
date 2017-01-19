@@ -8,6 +8,7 @@ var axios = require('axios');
 import TriviaApi from '../api/triviaApi'
 import TriviaComponent from './GameRoom/TriviaComponent'
 import '../../index.css'
+import Gifs from './gifs'
 
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
@@ -40,7 +41,7 @@ export var Gameroom = React.createClass({
             <LogoRight/>
           </div>
         </div>
-
+				<Gifs />
         <Footer/>
       </div>
     );

@@ -32,6 +32,7 @@ class TriviaComponent extends Component {
       correct: QuizQuestions[x].correct,
       type: QuizQuestions[x].type
     });
+		console.log("componentWillMount", QuizQuestions[x].correct);
   }
   shuffleArray(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -62,8 +63,8 @@ class TriviaComponent extends Component {
 
 
   setUserAnswer(answer) {
-    let correctAnswer = this.state.correct[0]
-    console.log(correctAnswer);
+    let correctAnswer = this.state.QuizQuestions;
+		let answersCount = this.state.answersCount;
     const updatedAnswersCount = update(this.state.answersCount, {
       [answer]: {$apply: (currentValue) => currentValue + 1}
     });

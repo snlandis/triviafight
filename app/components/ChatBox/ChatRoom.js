@@ -90,14 +90,14 @@ class ChatRoom extends Component {
   render () {
     return (
       <div className='5'>
-        <Header
+        <Header className="render-message"
           appName='Trivia Fight'
           user={this.state.user}
           onAuth={this.handleAuth}
           onLogout={this.totalUserRemove}
         />
       <div className=''>
-          <div className='4'>
+          <div className="render-message">
             {this.renderMessages()}
           </div>
         </div>

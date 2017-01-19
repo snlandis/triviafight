@@ -26,8 +26,8 @@ function Header ({ user, onAuth, onLogout }) {
 
   function renderLoginButton () {
     return (
-      <ul className='right'>
-        <li>
+      <ul className="login-for-chat">
+        <li className="login-for-chat">
           <button
             className='loginbutton hollow button'
             onClick={onAuth}
@@ -41,7 +41,7 @@ function Header ({ user, onAuth, onLogout }) {
 
   return (
     <nav className='blue darken-4'>
-      <div className='nav-wrapper container'>
+      <div className="login-for-chat">
         {user ? renderUserData() : renderLoginButton()}
       </div>
     </nav>

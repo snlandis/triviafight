@@ -32,12 +32,12 @@ export var Leaderboard = React.createClass({
 						<LogoLeft />
 					</div>
 					<div className="columns medium-6 large-4 small-centered">
-						<h1 className="text-center page-title font">Leaderboard</h1>
-						<div className="row">
-							<div className="large-12 columns medium-centered">
+						{/* <h1 className="text-center page-title font">Leaderboard</h1> */}
+						{/* <div className="row"> */}
+							{/* <div className="large-12 columns medium-centered"> */}
 
 
-						 <table>
+						 <table className="leaderboard-table">
 							 <caption>Current Standings</caption>
 									<thead>
 
@@ -115,10 +115,10 @@ export var Leaderboard = React.createClass({
 										</tbody>
 									</table>
 								</div>
-							</div>
+							{/* </div> */}
 
-						
-					</div>
+
+					{/* </div> */}
 						<div className="columns medium-3 medium-centered">
 							<LogoRight />
 					</div>

@@ -11,20 +11,21 @@ import router from 'app/router/';
 
 
 export var Challenge = React.createClass({
-	// onLogout(e) {
-  //   var {dispatch} = this.props;
-  //   e.preventDefault();
-	//
-  //   dispatch(actions.startLogout());
-  // },
+	onLogout(e) {
+    var {dispatch} = this.props;
+    e.preventDefault();
+
+    dispatch(actions.startLogout());
+  },
 
 	handleClick (e) {
 		e.preventDefault();
+		alert("stop pressing me dick");
 	},
 
   render() {
     return(
-			<div className="font main">
+			<div className="font-main">
 				<Nav />
 				<div className="page-actions">
 					<a href="#" onClick={this.onLogout}>Logout</a>
@@ -34,7 +35,7 @@ export var Challenge = React.createClass({
 							<LogoLeft />
 						</div>
 	            <div className="columns medium-6 large-4 small-centered" id="challenge-form">
-									<h1 className="text-center page-title font">Challenge</h1>
+									{/* <h1 className="text-center page-title font">Challenge</h1> */}
 									<form>
 										<div class="row" id="challenge-pg">
 											<div class="medium-6 columns">
@@ -48,7 +49,7 @@ export var Challenge = React.createClass({
 												</label>
 											</div>
 										</div>
-										<button className='hollow button alert' id="challenge-btn" onClick={this.submit}>
+										<button className='hollow button alert' id="challenge-btn" onClick={this.handleClick}>
 					            Challenge
 					          </button>
 										</form>

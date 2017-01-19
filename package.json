@@ -46,6 +46,7 @@
     "react-bootstrap": "^0.30.7",
     "react-dom": "^0.14.7",
     "react-favicon": "0.0.5",
+    "react-modal": "^1.6.5",
     "react-redux": "^5.0.2",
     "react-router": "^2.0.0",
     "react-time": "^4.2.0",

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Question from 'Question';
+// import Question from 'Question';
 
 class TriviaApi extends Component {
   constructor(props) {

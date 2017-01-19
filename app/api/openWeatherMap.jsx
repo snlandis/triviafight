@@ -2,8 +2,6 @@ var axios = require('axios');
 
 // the open weather map api needs to be entered here along with you api key
 const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?units=imperial&appid=14b4ca22a26b9fd730ddc39166e59dd8';
-
-
 module.exports={
   getWeather:function(location){
     var encodedLocation = encodeURIComponent (location);
@@ -23,6 +21,7 @@ module.exports={
               longitude: res.data.coord.lon
             };
       }
+      
     },function (res){
       throw new Error(res.data.message);
     });

@@ -3732,11 +3732,12 @@ correct: "B"
 correct: "D"
 }, {
   question: "Who was the first American in space?",
-  answers:[{type:"A", content: "John Glenn"
-}, {type:"B", content: "Buzz Aldrin"
-}, {type:"C", content: "Alan Shepard"
-}, {type:"D", content: "Neil Armstrong"}],
-correct: "C"
+  answers:[
+    {type:"A", content: "John Glenn"},
+    {type:"B", content: "Buzz Aldrin"},
+    {type:"C", content: "Alan Shepard"},
+    {type:"D", content: "Neil Armstrong"}],
+  correct: "C"
 }, {
   question: "Who was the first First Lady to run for political office?",
   answers:[{type:"A", content: "Hillary Clinton"

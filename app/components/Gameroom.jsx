@@ -6,7 +6,7 @@ var LogoLeft = require('LogoLeft');
 var LogoRight = require('LogoRight');
 var axios = require('axios');
 import TriviaApi from '../api/triviaApi'
-import App2 from '../../App2'
+import TriviaComponent from './GameRoom/TriviaComponent'
 import '../../index.css'
 
 import * as Redux from 'react-redux';
@@ -33,7 +33,7 @@ export var Gameroom = React.createClass({
             <LogoLeft/>
           </div>
           <div className="columns medium-6 large-4 small-centered">
-            <App2/>
+            <TriviaComponent/>
 
           </div>
           <div className="columns medium-3 medium-centered">

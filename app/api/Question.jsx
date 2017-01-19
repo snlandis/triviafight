@@ -140,7 +140,7 @@ var decodeEntities = (function() {
           </div>
           :
           <div>
-            <li><button onClick={ console.log('hello') } className="button round">A. {this.state.answers[0]}</button></li>
+            <li><button onClick={ this.checkAnswer } className="button round">A. {this.state.answers[0]}</button></li>
             <li><button onClick={ this.checkAnswer } className="button round">B. {this.state.answers[1]}</button></li>
             <li><button onClick={ this.checkAnswer } className="button round">C. {this.state.answers[2]}</button></li>
             <li><button onClick={ this.checkAnswer } className="button round">D. {this.state.answers[3]}</button></li>

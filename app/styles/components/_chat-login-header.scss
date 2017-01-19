@@ -20,5 +20,16 @@ ol, ul {
     border: 1px solid #cc4b37;
     color: #cc4b37;
 		margin-bottom: -2px;
-		margin-left: 80px;
+		// margin-left: 80px;
 }
+
+ol, ul {
+    text-align: center;
+    list-style: none;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+	}

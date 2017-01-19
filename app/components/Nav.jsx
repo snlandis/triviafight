@@ -25,7 +25,6 @@ var Nav = React.createClass({
 			</div>
 
       <nav className="top-bar" role="navigation">
-        <div className="top-bar-left">
           <ul className="small-block-grid-4" data-dropdown-menu>
             <li>
               <Link to="/main" className="eachLink" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red'}}>Trivia Fight</Link>
@@ -41,7 +40,6 @@ var Nav = React.createClass({
             </li>
 					</ul>
 
-        </div>
       </nav>
 		</div>
     );

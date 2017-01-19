@@ -24,11 +24,11 @@ input[type=search], input[type=submit]
   align-items: center !important;
   padding: 0
 }
-.nav-search
-{
-  max-width: 300px !important;
-  width: 300px
-}
+// .nav-search
+// {
+//   max-width: 300px !important;
+//   width: 300px
+// }
 
 .font, .page-title
 {
@@ -56,9 +56,9 @@ input[type=search], input[type=submit]
 
 }
 
-.top-bar .top-bar-left, .top-bar .top-bar-right {
-	width: 100%;
-}
+// .top-bar .top-bar-left, .top-bar .top-bar-right {
+// 	width: 100%;
+// }
 
 .menu
 {
@@ -74,44 +74,7 @@ input[type=search], input[type=submit]
   justify-content: center;
   width: 25%;
 }
-@media(max-width:962px){
-  .top-bar-left
-  {
-    width: 100%;
-  }
-  .top-bar-right
-  {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media(max-width:500px){
-  .row{
-    min-height: calc(100vh - 210px)
-  }
-  .app-name
-  {
-    width: 100%;
-    float: left;
-  }
-  .eachLink
-  {
-    width: 32%;
-    float: left;
-    margin-left: 1%;
- }
-  .top-bar-right
-  {
-    display: none
-  }
- .nav-search
- {
-   width: 140px;
- }
-}
+
 
 .weather-location
 {
@@ -151,9 +114,9 @@ input[type=search], input[type=submit]
   padding: 1em;
 }
 
-.navbar li {
-  margin: 0 0.5em;
-}
+// .navbar li {
+//   margin: 0 0.5em;
+// }
 
 .message-chat-list {
   display: flex;

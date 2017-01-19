@@ -19,11 +19,11 @@ body {
   border-radius: 3px;
 }
 
-@media (min-width: 769px) {
+/*@media (min-width: 769px) {
   .container {
     margin: 2.5rem auto;
   }
-}
+}*/
 
 /* Result Component */
 .result {

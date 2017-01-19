@@ -4,7 +4,7 @@ var LogoRight = React.createClass({
   render : function(){
     return (
       <div>
-        <img className="imgRight" src="app/images/logo.png" alt="logo" />
+        <img className="imgRight" src="app/images/triviafight.png" alt="logo" />
       </div>
     );
   }

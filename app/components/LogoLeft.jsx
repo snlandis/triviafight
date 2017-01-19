@@ -4,7 +4,7 @@ var LogoLeft = React.createClass({
   render : function(){
     return (
       <div className="logo-left-div">
-        <img className="imgLeft" src="app/images/logo.png" alt="logo" />
+        <img className="imgLeft" src="app/images/triviafight.png" alt="logo" />
       </div>
     );
   }

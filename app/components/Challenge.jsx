@@ -37,13 +37,13 @@ export var Challenge = React.createClass({
 	            <div className="columns medium-6 large-4 small-centered" id="challenge-form">
 									{/* <h1 className="text-center page-title font">Challenge</h1> */}
 									<form>
-										<div class="row" id="challenge-pg">
-											<div class="medium-6 columns">
+										<div className="row" id="challenge-pg">
+											<div className="medium-6 columns">
 												<label className="challenge-form">Find by Display Name
 													<input type="text" placeholder="Display Name" />
 												</label>
 											</div>
-											<div class="medium-6 columns">
+											<div className="medium-6 columns">
 												<label className="challenge-form">Find By Email
 													<input type="text" placeholder="Email" />
 												</label>

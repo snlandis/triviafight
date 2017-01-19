@@ -11,12 +11,13 @@ class TriviaComponent extends Component {
 
     this.state = {
       counter: 0,
-      questionId: 1,
+      questionId: 0,
       question: '',
       answerOptions: [],
-      answer: '',
+      answers: [],
       result: '',
-      correct: ''
+      correct: '',
+      type: ''
 
     };
 
@@ -30,8 +31,10 @@ class TriviaComponent extends Component {
       question: QuizQuestions[x].question,
       answerOptions: shuffledAnswerOptions[x],
       correct: QuizQuestions[x].correct,
-      type: QuizQuestions[x].type
+      type: QuizQuestions[x].answers.type,
+      answers: QuizQuestions[x].answers
     });
+    // console.log(shuffledAnswerOptions[x]);
   }
   shuffleArray(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -52,25 +55,38 @@ class TriviaComponent extends Component {
   };
 
   handleAnswerSelected(event) {
+    event.preventDefault();
+    console.log('what did i do', event.currentTarget.value)
+    let currentAnswer = event.currentTarget.value;
     this.setUserAnswer(event.currentTarget.value);
-    if (this.state.questionId < QuizQuestions.length) {
-        setTimeout(() => this.setNextQuestion(), 300);
+    if (event.currentTarget.value === this.state.correct){
+       console.log('FUCK YEAH DICKHEAD')
     } else {
-        setTimeout(() => this.setResults(this.getResults()), 300);
+      console.log('HAHA YOU FUCKING RETARD')
     }
+    setTimeout(() => this.setNextQuestion(), 300)
+    // if (this.state.questionId < QuizQuestions.length) {
+        // setTimeout(() => this.setNextQuestion(), 300);
+    // } else {
+        // setTimeout(() => this.setResults(this.getResults()), 300);
+    // }
   }
 
 
-  setUserAnswer(answer) {
+  setUserAnswer(type) {
     let correctAnswer = this.state.correct[0]
-    console.log(correctAnswer);
-    const updatedAnswersCount = update(this.state.answersCount, {
-      [answer]: {$apply: (currentValue) => currentValue + 1}
-    });
+    let firstChoice = this.state.answers[type]
+    // console.log('i',i);
+    console.log('this.state.answers',this.state.answers)
+    // console.log('What you chose: ', firstChoice)
+    console.log('Correct answer: ', correctAnswer);
+
+    // const updatedAnswersCount = update(this.state.answersCount, {
+    //   [type]: {$apply: (currentValue) => currentValue + 1}
+    // });
 
     this.setState({
-        answersCount: updatedAnswersCount,
-        answer: answer,
+        type: firstChoice,
         correct: correctAnswer
     });
   }
@@ -78,7 +94,7 @@ class TriviaComponent extends Component {
   checkForAnswer(event) {
     this.setUserAnswer(event.currentTarget.value);
 
-    if (this.state.answer == this.state.correct){
+    if (event.currentTarget.value == this.state.correct){
       console.log('Correct');
     } else {
       console.log('Wrong');
@@ -88,14 +104,14 @@ class TriviaComponent extends Component {
   setNextQuestion() {
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
-    console.log('sir');
+    // console.log(questionId);
     this.setState({
         counter: counter,
         questionId: questionId,
         question: QuizQuestions[counter].question,
         answerOptions: QuizQuestions[counter].answers,
-        answer: '',
-        correct: QuizQuestions[x].correct
+        type: QuizQuestions[counter].answers.type,
+        correct: QuizQuestions[counter].correct
     });
   }
 
@@ -119,13 +135,14 @@ class TriviaComponent extends Component {
   renderQuiz() {
     return (
       <Quiz
-        answer={this.state.answer}
+        type={this.state.handleAnswerSelected}
         answerOptions={this.state.answerOptions}
         correct={this.state.correct}
         questionId={this.state.questionId}
         question={this.state.question}
         questionTotal={QuizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
+        checkForAnswer={this.checkForAnswer}
       />
     );
   }

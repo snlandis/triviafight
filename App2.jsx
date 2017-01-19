@@ -17,6 +17,7 @@ class App2 extends Component {
       answer: '',
       result: '',
       correct: ''
+
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -24,16 +25,16 @@ class App2 extends Component {
 
   componentWillMount() {
     const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
-    console.log('hello');
+    let x = Math.floor(Math.random() * 547)
     this.setState({
-      question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
+      question: quizQuestions[x].question,
+      answerOptions: shuffledAnswerOptions[x],
+      correct: quizQuestions[x].correct,
+      type: quizQuestions[x].type
     });
   }
-
   shuffleArray(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
 
@@ -52,7 +53,6 @@ class App2 extends Component {
 
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
-
     if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
     } else {
@@ -62,6 +62,8 @@ class App2 extends Component {
 
 
   setUserAnswer(answer) {
+    let correctAnswer = this.state.correct[0]
+    console.log(correctAnswer);
     const updatedAnswersCount = update(this.state.answersCount, {
       [answer]: {$apply: (currentValue) => currentValue + 1}
     });
@@ -69,7 +71,7 @@ class App2 extends Component {
     this.setState({
         answersCount: updatedAnswersCount,
         answer: answer,
-        correct: quizQuestions[counter].correct
+        correct: correctAnswer
     });
   }
 
@@ -86,14 +88,14 @@ class App2 extends Component {
   setNextQuestion() {
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
-
+    console.log('sir');
     this.setState({
         counter: counter,
         questionId: questionId,
         question: quizQuestions[counter].question,
         answerOptions: quizQuestions[counter].answers,
         answer: '',
-        correct: quizQuestions[counter].correct
+        correct: quizQuestions[x].correct
     });
   }
 
@@ -124,7 +126,6 @@ class App2 extends Component {
         question={this.state.question}
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
-        correct={this.state.correct}
       />
     );
   }

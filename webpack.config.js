@@ -92,8 +92,7 @@ module.exports = {
       AnswerOption: 'app/components/AnswerOption.jsx',
       Question: 'app/components/Question.jsx',
       Quiz: 'app/components/Quiz.jsx',
-      Result: 'app/components/Result.jsx',
-      logo: 'svg/icon-check.svg'
+      Result: 'app/components/Result.jsx'
         },
     extensions: ['', '.js', '.jsx']
   },

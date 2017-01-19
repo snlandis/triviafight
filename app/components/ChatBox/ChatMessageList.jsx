@@ -12,7 +12,6 @@ class ChatMessageList extends Component {
   constructor (props) {
     super(props)
     this.messagesDB = firebase.database().ref(`messages/`)
-  /*  this is the original string this.messagesDB = firebase.database().ref(`messages/${this.props.user.uid}`) */
     this.handleSendMessage = this.handleSendMessage.bind(this)
     this.messagesDBUL = firebase.database().ref(`userlist/`)
 
@@ -39,6 +38,7 @@ class ChatMessageList extends Component {
 
   ComponentWillUnmount () {
     this.messagesDB.off()
+    this.messagesDBUL.off()
   }
 
   handleSendMessage (text) {
@@ -53,12 +53,20 @@ class ChatMessageList extends Component {
     console.log(msg);
   }
 
-  render () {
+  userModal () {
+    console.log("Heck yea");
+  }
+
+  userSend () {
     if (localStorage.displayName === "Bob Barker"){
       console.log("Hi Kollin");
     } else {
       console.log("who are you");
     }
+  }
+
+  render () {
+
     return (
       <div className='3'>
         <div className="row" id="MessageAndUserList">
@@ -66,6 +74,7 @@ class ChatMessageList extends Component {
             {
               this.state.messages.map(msg => (
                 <ChatMessage
+                  userSend={this.userSend}
                   key={msg.date}
                   message={msg}
                 />
@@ -80,6 +89,7 @@ class ChatMessageList extends Component {
               this.state.users.map(msg => (
                 <UserList
                   message={msg}
+                  userModal={this.userModal}
                 />
               )).reverse()
             }

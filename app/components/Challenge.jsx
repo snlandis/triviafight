@@ -11,12 +11,16 @@ import router from 'app/router/';
 
 
 export var Challenge = React.createClass({
-	onLogout(e) {
-    var {dispatch} = this.props;
-    e.preventDefault();
+	// onLogout(e) {
+  //   var {dispatch} = this.props;
+  //   e.preventDefault();
+	//
+  //   dispatch(actions.startLogout());
+  // },
 
-    dispatch(actions.startLogout());
-  },
+	handleClick (e) {
+		e.preventDefault();
+	},
 
   render() {
     return(
@@ -29,36 +33,26 @@ export var Challenge = React.createClass({
 							<div className="columns medium-3 columns small-centered">
 							<LogoLeft />
 						</div>
-	            <div className="columns medium-6 large-4 small-centered">
+	            <div className="columns medium-6 large-4 small-centered" id="challenge-form">
 									<h1 className="text-center page-title font">Challenge</h1>
-										<p>Here are a few examples</p>
-										<p>
-											Here are some of the tools I used:
-										</p>
-											<ol >
-												<li>
-													<Link to="/?location=Austin, Texas">Austin, Texas</Link>
-												</li>
-												<li>
-													<Link to="/?location=London,UK">London, UK</Link>
-												</li>
-												<li>
-													<Link to="/?location=Faro, Portugal">Faro, Portugal</Link>
-												</li>
-												<li>
-													<Link to="/?location=San Francisco, California">San Francisco, California</Link>
-												</li>
-												<li>
-													<Link to="/?location=Sydney, Australia">Sydney, Australia</Link>
-												</li>
-												<li>
-													<Link to="/?location=Seoul, South Korea">Seoul, South Korea</Link>
-												</li>
-												<li>
-													<Link to="/?location=Rio, Brazil">Rio, Brazil</Link>
-												</li>
-											</ol>
+									<form>
+										<div class="row" id="challenge-pg">
+											<div class="medium-6 columns">
+												<label className="challenge-form">Find by Display Name
+													<input type="text" placeholder="Display Name" />
+												</label>
+											</div>
+											<div class="medium-6 columns">
+												<label className="challenge-form">Find By Email
+													<input type="text" placeholder="Email" />
+												</label>
+											</div>
 										</div>
+										<button className='hollow button alert' id="challenge-btn" onClick={this.submit}>
+					            Challenge
+					          </button>
+										</form>
+									</div>
 
 							<div className="columns medium-3 medium-centered">
 							<LogoRight />

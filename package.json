@@ -21,6 +21,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.3.0",
     "body-parser": "^1.15.2",
+    "boron": "^0.2.3",
     "core-js": "^2.4.1",
     "css-loader": "^0.24.0",
     "express": "^4.14.0",

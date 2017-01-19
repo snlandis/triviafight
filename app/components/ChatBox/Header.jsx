@@ -3,16 +3,16 @@ import React from 'react'
 function Header ({ user, onAuth, onLogout }) {
   function renderUserData () {
     return (
-      <ul className='navbar right'>
-        <li>
+      <ul className="chat-login-header">
+        <li className="chat-header-li">
           <img
             width='32'
             className='avatar circle responsive-img'
             src={user.photoURL}
           />
         </li>
-        <li>{user.displayName} Testing Name</li>
-        <li>
+        <li className="chat-header-li">{user.displayName}</li>
+        <li className="chat-header-li" id="chat-log-button">
           <button
             className='hollow button alert'
             onClick={onLogout}

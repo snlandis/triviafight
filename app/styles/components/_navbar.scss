@@ -1,0 +1,24 @@
+#navbar {
+	padding: 0rem;
+}
+
+.top-bar-left {
+	height: 50px;
+	width: 100%;
+}
+
+
+.small-block-grid-4 li {
+	width: 25%;
+	display: inline-block;
+	list-style: none;
+}
+
+.small-block-grid-4 li a {
+	text-align: center;
+	width: 100%;
+}
+
+.app-name, .eachLink {
+	text-align: center;
+}

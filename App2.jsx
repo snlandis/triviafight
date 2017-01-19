@@ -23,9 +23,10 @@ class App2 extends Component {
 
   componentWillMount() {
     const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
+
     this.setState({
-      question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
+      question: quizQuestions[1].question,
+      answerOptions: shuffledAnswerOptions[1]
     });
   }
 
@@ -121,10 +122,7 @@ class App2 extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>React Quiz</h2>
-        </div>
+
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
     );

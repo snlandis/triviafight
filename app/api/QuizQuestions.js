@@ -1,4 +1,4 @@
-var quizQuestions:
+var quizQuestions=
 [{
   question: "A flashing red traffic light signifies that a driver should do what?",
   answers:[{type:"A", content: "stop"
@@ -3828,5 +3828,5 @@ correct: "D"
 }, {type:"C", content: "electric guitar"
 }, {type:"D", content: "baby"}],
 correct: "C"
-}]
+}];
 export default quizQuestions;

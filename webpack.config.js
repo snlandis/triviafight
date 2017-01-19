@@ -84,8 +84,17 @@ module.exports = {
 			reducers: 'app/reducers/reducers.jsx',
 			configureStore: 'app/store/configureStore.jsx',
       TriviaApi: 'app/api/TriviaApi',
-			Gifs: 'app/components/gifs.jsx'
-    },
+      App2: 'app/app.jsx',
+      Question: 'app/api/Question.jsx',
+			Gifs: 'app/components/gifs.jsx',
+      QuestionCount: 'app/components/QuestionCount.jsx',
+      quizQuestions: 'app/api/quizQuestions.js',
+      AnswerOption: 'app/components/AnswerOption.jsx',
+      Question2: 'app/components/Question2.jsx',
+      Quiz: 'app/components/Quiz.jsx',
+      Result: 'app/components/Result.jsx',
+      logo: 'svg/icon-check.svg'
+        },
     extensions: ['', '.js', '.jsx']
   },
   // because the entry file is jsx we require a loader to get it started

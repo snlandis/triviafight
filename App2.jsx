@@ -10,12 +10,13 @@ class App2 extends Component {
     super(props);
 
     this.state = {
-      counter: 1,
-      questionId: 2,
+      counter: 0,
+      questionId: 1,
       question: '',
       answerOptions: [],
       answer: '',
-      result: ''
+      result: '',
+      correct: ''
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -23,10 +24,10 @@ class App2 extends Component {
 
   componentWillMount() {
     const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
-    let x = Math.floor(Math.random() * 547)
+    console.log('hello');
     this.setState({
-      question: quizQuestions[x].question,
-      answerOptions: shuffledAnswerOptions[x]
+      question: quizQuestions[0].question,
+      answerOptions: shuffledAnswerOptions[0]
     });
   }
 
@@ -59,6 +60,7 @@ class App2 extends Component {
     }
   }
 
+
   setUserAnswer(answer) {
     const updatedAnswersCount = update(this.state.answersCount, {
       [answer]: {$apply: (currentValue) => currentValue + 1}
@@ -66,8 +68,19 @@ class App2 extends Component {
 
     this.setState({
         answersCount: updatedAnswersCount,
-        answer: answer
+        answer: answer,
+        correct: quizQuestions[counter].correct
     });
+  }
+
+  checkForAnswer(event) {
+    this.setUserAnswer(event.currentTarget.value);
+
+    if (this.state.answer == this.state.correct){
+      console.log('Correct');
+    } else {
+      console.log('Wrong');
+    }
   }
 
   setNextQuestion() {
@@ -79,7 +92,8 @@ class App2 extends Component {
         questionId: questionId,
         question: quizQuestions[counter].question,
         answerOptions: quizQuestions[counter].answers,
-        answer: ''
+        answer: '',
+        correct: quizQuestions[counter].correct
     });
   }
 
@@ -105,10 +119,12 @@ class App2 extends Component {
       <Quiz
         answer={this.state.answer}
         answerOptions={this.state.answerOptions}
+        correct={this.state.correct}
         questionId={this.state.questionId}
         question={this.state.question}
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
+        correct={this.state.correct}
       />
     );
   }

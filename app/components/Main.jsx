@@ -14,7 +14,6 @@ import router from 'app/router/';
 import ChatRoom from './ChatBox/ChatRoom';
 
 
-
 export var Main = React.createClass({
 	onLogout(e) {
     var {dispatch} = this.props;
@@ -43,7 +42,6 @@ export var Main = React.createClass({
           </div>
 
         <Footer />
-
       </div>
     );
   }

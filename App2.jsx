@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import quizQuestions from './app/api/quizQuestions';
+import Quiz from './app/components/Quiz';
+import Result from './app/components/Result';
 import update from 'react-addons-update';
-import quizQuestions from './api/quizQuestions';
-import Quiz from './components/Quiz';
-import Result from './components/Result';
-import './App.css';
 
-class App extends Component {
+class App2 extends Component {
 
   constructor(props) {
     super(props);
@@ -16,11 +15,6 @@ class App extends Component {
       question: '',
       answerOptions: [],
       answer: '',
-      answersCount: {
-        Nintendo: 0,
-        Microsoft: 0,
-        Sony: 0
-      },
       result: ''
     };
 
@@ -137,3 +131,5 @@ class App extends Component {
   }
 
 }
+
+export default App2;

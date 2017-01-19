@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Question(props) {
+function Question2(props) {
 
   return (
     <h2 className="question">{props.content}</h2>
@@ -8,8 +8,8 @@ function Question(props) {
 
 }
 
-Question.propTypes = {
+Question2.propTypes = {
   content: React.PropTypes.string.isRequired
 };
 
-export default Question;
+export default Question2;

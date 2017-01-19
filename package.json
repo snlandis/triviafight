@@ -58,6 +58,7 @@
     "socket.io": "^1.7.2",
     "socket.io-client": "^1.7.2",
     "style-loader": "^0.13.1",
+    "twilio": "^2.11.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
@@ -102,6 +103,7 @@
     "script-loader": "^0.7.0",
     "socket.io": "^1.7.2",
     "style-loader": "^0.13.1",
+    "twilio": "^2.11.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.12.0"

@@ -34,8 +34,10 @@ class TriviaComponent extends Component {
       type: QuizQuestions[x].answers.type,
       answers: QuizQuestions[x].answers
     });
+
     // console.log(shuffledAnswerOptions[x]);
   }
+	
   shuffleArray(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...

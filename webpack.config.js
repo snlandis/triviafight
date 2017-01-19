@@ -81,7 +81,8 @@ module.exports = {
 			actions: 'app/actions/actions.jsx',
 			reducers: 'app/reducers/reducers.jsx',
 			configureStore: 'app/store/configureStore.jsx',
-      TriviaApi: 'app/api/TriviaApi'
+      TriviaApi: 'app/api/TriviaApi',
+      Question: 'app/api/Question.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

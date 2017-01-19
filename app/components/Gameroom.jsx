@@ -35,8 +35,6 @@ export var Gameroom = React.createClass({
           </div>
           <div className="columns medium-6 large-4 small-centered">
             <TriviaComponent/>
-            <Buttoner />
-
           </div>
           <div className="columns medium-3 medium-centered">
             <LogoRight/>

@@ -1,9 +1,13 @@
 var quizQuestions=
 [{
   question: "A flashing red traffic light signifies that a driver should do what?",
-  answers:[{type:"A", content: "stop"
-}, {type:"B", content: "speed up"
-}, {type:"C", content: "proceed with caution"
+  answers:
+  [{
+    type:"A", content: "stop"
+}, {
+  type:"B", content: "speed up"
+}, {
+  type:"C", content: "proceed with caution"
 }, {type:"D", content: "honk the horn"}],
 correct: "A"
 }, {

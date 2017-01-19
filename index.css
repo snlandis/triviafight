@@ -114,12 +114,11 @@ body {
 
 .fade-leave {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: auto 0;
+    left: auto 0;
     width: 50%;
     opacity: 1;
 }
-
 .fade-leave.fade-leave-active {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;

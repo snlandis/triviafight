@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import quizQuestions from './app/api/quizQuestions';
-import Quiz from './app/components/Quiz';
-import Result from './app/components/Result';
+import QuizQuestions from 'QuizQuestions';
+import Quiz from './Quiz';
+import Result from './Result';
 import update from 'react-addons-update';
 
-class App2 extends Component {
+class TriviaComponent extends Component {
 
   constructor(props) {
     super(props);
@@ -24,13 +24,13 @@ class App2 extends Component {
   }
 
   componentWillMount() {
-    const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
+    const shuffledAnswerOptions = QuizQuestions.map((question) => this.shuffleArray(question.answers));
     let x = Math.floor(Math.random() * 547)
     this.setState({
-      question: quizQuestions[x].question,
+      question: QuizQuestions[x].question,
       answerOptions: shuffledAnswerOptions[x],
-      correct: quizQuestions[x].correct,
-      type: quizQuestions[x].type
+      correct: QuizQuestions[x].correct,
+      type: QuizQuestions[x].type
     });
   }
   shuffleArray(array) {
@@ -53,7 +53,7 @@ class App2 extends Component {
 
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
-    if (this.state.questionId < quizQuestions.length) {
+    if (this.state.questionId < QuizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
     } else {
         setTimeout(() => this.setResults(this.getResults()), 300);
@@ -92,10 +92,10 @@ class App2 extends Component {
     this.setState({
         counter: counter,
         questionId: questionId,
-        question: quizQuestions[counter].question,
-        answerOptions: quizQuestions[counter].answers,
+        question: QuizQuestions[counter].question,
+        answerOptions: QuizQuestions[counter].answers,
         answer: '',
-        correct: quizQuestions[x].correct
+        correct: QuizQuestions[x].correct
     });
   }
 
@@ -124,7 +124,7 @@ class App2 extends Component {
         correct={this.state.correct}
         questionId={this.state.questionId}
         question={this.state.question}
-        questionTotal={quizQuestions.length}
+        questionTotal={QuizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
       />
     );
@@ -147,4 +147,4 @@ class App2 extends Component {
 
 }
 
-export default App2;
+export default TriviaComponent;

@@ -88,7 +88,7 @@ module.exports = {
       // Question: 'app/api/Question.jsx',
 			Gifs: 'app/components/gifs.jsx',
       QuestionCount: 'app/components/QuestionCount.jsx',
-      quizQuestions: 'app/api/quizQuestions.js',
+      QuizQuestions: 'app/api/QuizQuestions.js',
       AnswerOption: 'app/components/AnswerOption.jsx',
       Question: 'app/components/Question.jsx',
       Quiz: 'app/components/Quiz.jsx',

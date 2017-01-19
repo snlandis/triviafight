@@ -3828,5 +3828,5 @@ correct: "D"
 }, {type:"C", content: "electric guitar"
 }, {type:"D", content: "baby"}],
 correct: "C"
-}]
+}];
 export default quizQuestions;

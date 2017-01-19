@@ -10,8 +10,8 @@ class App2 extends Component {
     super(props);
 
     this.state = {
-      counter: 0,
-      questionId: 1,
+      counter: 1,
+      questionId: 2,
       question: '',
       answerOptions: [],
       answer: '',
@@ -23,10 +23,10 @@ class App2 extends Component {
 
   componentWillMount() {
     const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
-
+    let x = Math.floor(Math.random() * 547)
     this.setState({
-      question: quizQuestions[1].question,
-      answerOptions: shuffledAnswerOptions[1]
+      question: quizQuestions[x].question,
+      answerOptions: shuffledAnswerOptions[x]
     });
   }
 

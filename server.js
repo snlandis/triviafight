@@ -1,21 +1,28 @@
-var express = require('express');
+const express = require('express');
 //create the app
-var app = express();
 var twilio = require('twilio');
 
 var http = require('http');
 var socketIO = require('socket.io');
 var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const INDEX = __dirname + '/index.html';
+const path = require('path');
+const webpack = require('webpack');
+const webpackMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware  = require('webpack-hot-middleware');
+const webpackconfig = require('./webpack.config.js');
+const bodyParser = require('body-parser');
+const isDeveloping = process.env.NODE_ENV !== 'production';
+const app = express();
+// Routes
+let smsRoute = require('./server/controllers/router');
 
 
 
 
 
 var userController = require('./server/controllers/user-controller.js');
-var WebsocketServer = require('ws').Server;
 
 
 
@@ -45,28 +52,34 @@ app.get('/', function(req, res, next){
 
 });
 
-app.get('/users', function(req, res){
-  res.sendFile(__dirname + "/index2.html");
-  var accountSid = "09b655e9e43e6848e2d10dc69be7db9a";
-  var authToken = "AC316cbfecef94d28e96fa6ae8493ad82c";
-  var client = require('twilio')(accountSid, authToken);
-  client.messages.create({
-    to: "5129251021",
-    from: "+15125808084",
-    body: "Someone has challenged you to a Trivia Fight! Accept the challenge @ https://trivia-fight.herokuapp.com/",
-  }, function(err, message) {
-    if(err){
-      console.log(err);
-    } else {
-      console.log(message.sid);
+const compiler = webpack(webpackconfig);
+const middleware = webpackMiddleware(compiler, {
+    publicPath: webpackconfig.output.publicPath,
+    contentBase: 'src',
+    stats: {
+        colors: true,
+        hash: false,
+        timings: true,
+        chunks: false,
+        chunkModules: false,
+        modules: false
     }
-  });
-
-  client.messages('SM8c60e27ad0914188a82299e56ab90cde').get(function(err, message) {
-    console.log("Sent");
-  });
-
 });
+app.use(middleware);
+/*
+*   @summary For whatever the URL is just go to index
+*/
+app.get('*', function response(req, res) {
+    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
+    res.end();
+});
+/*
+*   @summary calling 'api/sms-promotion'
+*   @request POST
+*   @see smsRoute and 'controller/router'
+*   @return response as text
+*/
+app.use(smsRoute);
 
 
 

@@ -36,7 +36,7 @@ export var Challenge = React.createClass({
             <LogoRight/>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   }

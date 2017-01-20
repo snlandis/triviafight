@@ -73,6 +73,7 @@ class TriviaComponent extends Component {
       console.log(this.state.count);
       if (this.state.count <= 1){
         alert('You\'ve been knocked out!');
+				window.location = ('/#/main');
       }
     }
     setTimeout(() => this.setNextQuestion(), 300)

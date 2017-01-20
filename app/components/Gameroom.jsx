@@ -17,6 +17,20 @@ import * as actions from 'actions';
 import router from 'app/router/';
 
 export var Gameroom = React.createClass({
+	getInitialState: function () {
+        return {favorite: true};
+    },
+
+    handleClick: function (event) {
+			if(this.state.favorite === true) {
+				this.setState({favorite: !this.state.favorite});
+				setTimeout(function() {
+					this.setState({favorite: true});
+				}.bind(this),1000);
+			}
+
+    },
+
   onLogout(e) {
     var {dispatch} = this.props;
     e.preventDefault();
@@ -25,6 +39,13 @@ export var Gameroom = React.createClass({
   },
 
   render() {
+		var ken = this.state.favorite ?
+		<img src='app/images/gifs/ken/kenstance.gif' className="ken"/> :
+		<img src='app/images/gifs/ken/kenPunch.gif' className="punch" />;
+		var ryu = this.state.favorite ?
+		 <img src='app/images/gifs/ryu/ryustance.gif' className="ryu"/> :
+		 <img src='app/images/gifs/ryu/getting-hit.gif' className="ryu"/>;
+
     return (
       <div className="font main">
         <Nav/>
@@ -34,7 +55,7 @@ export var Gameroom = React.createClass({
           <div className="columns medium-3 columns small-centered">
             <LogoLeft/>
           </div>
-          <div className="columns medium-6 large-4 small-centered">
+          <div className="columns medium-6 large-4 small-centered" onClick={this.handleClick}>
             <TriviaComponent/>
           </div>
           <div className="columns medium-3 medium-centered">
@@ -42,7 +63,9 @@ export var Gameroom = React.createClass({
           </div>
         </div>
 				<div>
-				<Ken />
+					<div className="gifs">
+				{ken}{ryu}
+			</div>
 			</div>
         <Footer/>
       </div>

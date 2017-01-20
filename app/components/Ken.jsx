@@ -9,7 +9,7 @@ var Ken = React.createClass({
 
     handleClick: function (event) {
 			if(this.state.favorite === true) {
-				this.setState({favorite: !this.state.favourite});
+				this.setState({favorite: !this.state.favorite});
 				setTimeout(function() {
 					this.setState({favorite: true});
 				}.bind(this),1000);
@@ -18,12 +18,17 @@ var Ken = React.createClass({
     },
 
     render: function() {
-        var ken = this.state.favorite ? 'app/images/gifs/ken/kenstance.gif' : 'app/images/gifs/ken/kenPunch.gif';
+        var ken = this.state.favorite ?
+				<img src='app/images/gifs/ken/kenstance.gif' className="ken"/> :
+				<img src='app/images/gifs/ken/kenPunch.gif' className="punch" />;
+				var ryu = this.state.favorite ?
+				 <img src='app/images/gifs/ryu/ryustance.gif' className="ryu"/> :
+				 <img src='app/images/gifs/ryu/getting-hit.gif' className="ryu"/>;
 
 
         return (
-            <div className="gifs" >
-            	<img src={ken} onClick={this.handleClick} /><Ryu />
+            <div className="gifs" onClick={this.handleClick} >
+            	{ken}{ryu}
 						</div>
         );
     }

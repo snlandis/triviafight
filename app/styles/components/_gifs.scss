@@ -5,10 +5,18 @@
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
-	margin-left: 50px;
+	// margin-left: -50px;
 }
 
 .gifs {
 	text-align: center;
 	margin: 15px;
+}
+
+.ken {
+	// margin-left: 40px;
+}
+
+.punch {
+	margin-right: -60px;
 }

@@ -6,16 +6,17 @@ import update from 'react-addons-update';
 
 class TriviaComponent extends Component {
 
+
   constructor(props) {
     super(props);
 
     this.state = {
       counter: 0,
-      count: 5,
       questionId: 0,
       question: '',
       answerOptions: [],
       answers: [],
+      count: 5,
       result: '',
       correct: '',
       type: ''
@@ -63,9 +64,14 @@ class TriviaComponent extends Component {
     let currentAnswer = event.currentTarget.value;
     this.setUserAnswer(event.currentTarget.value);
     if (event.currentTarget.value === this.state.correct){
-       return this.state.count
+       console.log('FUCK YEAH DICKHEAD')
     } else {
-      return (this.state.count - 1)
+      console.log('HAHA YOU FUCKING RETARD')
+      this.setState({count: this.state.count - 1});
+      console.log(this.state.count);
+      if (this.state.count <= 1){
+        alert('You\'ve been knocked out!');
+      }
     }
     setTimeout(() => this.setNextQuestion(), 300)
     // if (this.state.questionId < QuizQuestions.length) {
@@ -159,12 +165,3 @@ class TriviaComponent extends Component {
   render() {
     return (
       <div className="App">
-
-        {this.state.result ? this.renderResult() : this.renderQuiz()}
-      </div>
-    );
-  }
-
-}
-
-export default TriviaComponent;

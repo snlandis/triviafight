@@ -13,9 +13,67 @@ try {
 
 }
 
-var firebaseRef = firebase.database().ref();
+function writeUserData(userId, name, email, imageUrl) {
+  firebase.database().ref('leaderboard/' + userId).set({
+    username: name,
+		score: 432,
+    profile_picture : imageUrl
+  });
+}
 
+var firebaseRef = firebase.database().ref('leaderboard/');
 
+firebaseRef.set([
+	{
+		username: "Kollin Brandenburg",
+		score: 432,
+	},
+	{
+		username: "Stephen Landis",
+		score: 420,
+	},
+	{
+		username: "Kyle Crichton",
+		score: 230,
+	},
+	{
+		username: "Paul Lizama",
+		score: 8,
+	},
+	{
+		username: "Dirk Diggler",
+		score: 12,
+	},
+	{
+		username: "Mike Dang",
+		score: -69,
+	},
+	{
+		username: "Luke Popwell",
+		score: 100,
+	},
+	{
+		username: "Stephanie Workman",
+		score: 6,
+	},
+	{
+		username: "Britt Shroyer",
+		score: 32,
+	},
+	{
+		username: "John Doe",
+		score: 45,
+	},
+	{
+		username: "Scott Fuller",
+		score: 22,
+	},
+	{
+		username: "Peter Griffin",
+		score: 999,
+	},
+]
+)
 
 export var githubProvider = new firebase.auth.GithubAuthProvider();
 export var provider = new firebase.auth.TwitterAuthProvider();

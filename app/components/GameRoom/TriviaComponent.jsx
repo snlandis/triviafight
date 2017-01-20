@@ -117,13 +117,14 @@ class TriviaComponent extends Component {
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
     // console.log(questionId);
+    let y = Math.floor(Math.random() * 547)
     this.setState({
         counter: counter,
         questionId: questionId,
-        question: QuizQuestions[counter].question,
-        answerOptions: QuizQuestions[counter].answers,
-        type: QuizQuestions[counter].answers.type,
-        correct: QuizQuestions[counter].correct
+        question: QuizQuestions[y].question,
+        answerOptions: QuizQuestions[y].answers,
+        type: QuizQuestions[y].answers.type,
+        correct: QuizQuestions[y].correct
     });
   }
 

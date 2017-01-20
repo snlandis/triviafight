@@ -83,7 +83,7 @@ class ChatRoom extends Component {
     if (this.state.user) {
       return <ChatMessageList user={this.state.user} twitterHandle={this.state.user.displayName} />
     } else {
-      return <div>You need to Log In to see the Messages.</div>
+      return <div className="loginmessage">You need to Log In to see the Messages.</div>
     }
   }
 

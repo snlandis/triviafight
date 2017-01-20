@@ -3,7 +3,6 @@ const express = require('express');
 var twilio = require('twilio');
 
 var http = require('http');
-var socketIO = require('socket.io');
 var mongoose = require('mongoose');
 const PORT = process.env.PORT || 3000;
 const INDEX = __dirname + '/index.html';
@@ -52,20 +51,7 @@ app.get('/', function(req, res, next){
 
 });
 
-const compiler = webpack(webpackconfig);
-const middleware = webpackMiddleware(compiler, {
-    publicPath: webpackconfig.output.publicPath,
-    contentBase: 'src',
-    stats: {
-        colors: true,
-        hash: false,
-        timings: true,
-        chunks: false,
-        chunkModules: false,
-        modules: false
-    }
-});
-app.use(middleware);
+
 /*
 *   @summary For whatever the URL is just go to index
 */

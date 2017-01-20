@@ -8,7 +8,6 @@ var {Provider} = require('react-redux');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
 var Main = require('Main');
-var Weather = require('Weather');
 var Leaderboard = require('Leaderboard');
 var Chat = require('Chat');
 var Challenge = require('Challenge');

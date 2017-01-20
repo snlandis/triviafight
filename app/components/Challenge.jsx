@@ -9,7 +9,7 @@ import ChallengeInput from './ChallengeInput';
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
 import router from 'app/router/';
-import TwilioSMS from './Challenge/layout/App.js'
+import TwilioSMS from './Challenge/TwilioSMS.js'
 
 
 export var Challenge = React.createClass({

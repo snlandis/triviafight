@@ -22,6 +22,9 @@
 @import "components/misc";
 @import "components/questions";
 
+body{
+  background-color: #F2e1ad;
+}
 .app {
     width: 300px;
     margin: 0 auto;
@@ -68,6 +71,7 @@ button {
     font-size: 14px;
     line-height: 20px;
 }
+
 
 /* Animation */
 

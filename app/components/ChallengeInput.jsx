@@ -12,9 +12,9 @@ function ChallengeInput() {
   }
 
   return (
-    <form className='' onSubmit={handleSubmit}>
+    <form id="challenge-form" onSubmit={handleSubmit}>
       <div className="row" id="challenge-pg">
-        <div className="medium-6 columns">
+        <div align="center" className="medium-6 columns">
           <label className="challenge-form">Enter Phone # of the Person You wish to Challenge
             <input type="text" placeholder="Phone Number"/>
           </label>

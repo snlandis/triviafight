@@ -10,6 +10,7 @@ function UserList ({ message }) {
     <div>
       <div className="row">
          {message.displayName}
+         <ModalButton />
        </div>
     </div>
   )

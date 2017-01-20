@@ -2,3 +2,15 @@
   text-align: center;
 	padding: 25px;
 }
+
+.image:hover {
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+-webkit-box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .75);
+box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .75);
+}
+.image {
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+margin: 10px;
+}

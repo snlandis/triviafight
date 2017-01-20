@@ -29,7 +29,7 @@ function Header ({ user, onAuth, onLogout }) {
       <ul className="login-for-chat">
         <li className="login-for-chat">
           <button
-            className='loginbutton hollow button'
+            className='loginbutton hollow button loginmessage'
             onClick={onAuth}
           >
             Login

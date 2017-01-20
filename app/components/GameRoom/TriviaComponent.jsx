@@ -165,3 +165,12 @@ class TriviaComponent extends Component {
   render() {
     return (
       <div className="App">
+
+        {this.state.result ? this.renderResult() : this.renderQuiz()}
+      </div>
+    );
+  }
+
+}
+
+export default TriviaComponent;

@@ -20,8 +20,9 @@ EJS
 Twilio
 
 #User Stories
-This is where the stories go about why people should want to use this app.
+As a gamer, I'd like to be able to chat with people and have an interactive experience with my gameplay.
 
+As someone with too much free time, I'd like to be able to talk trash to my friends while not working.
 #Wireframe
 Loading Page: ![Loading Page](app/images/Wireframe1.jpg)
 

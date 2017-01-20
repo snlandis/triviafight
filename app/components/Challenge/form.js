@@ -83,13 +83,14 @@ export default class Form extends React.Component {
   render() {
     let formProps = this.props;
     return (
-      <div>
+      <div className="challenge">
         <p>Enter the Phone # of someone you want to Trivia Fight</p>
         <Response responseText={this.state.response}></Response>
         <form ref="theform" action={formProps.formAction} method={formProps.formMethod} onSubmit={this.Handlesubmit}>
           <formEl className="displayf">
             <input type="text" ref="phonevalue" name="phone" id="form__container_phone" className="form__container_phone" value={this.state.phonevalue} onChange={this.handlePhone} onKeyPress={this.validatePhone} required/>
-            <button type="submit" className="form__container_submit">Submit</button>
+
+          <button type="submit" className="form__container_submit">Submit</button>
           </formEl>
         </form>
       </div>

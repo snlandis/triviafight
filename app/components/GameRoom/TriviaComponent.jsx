@@ -11,6 +11,7 @@ class TriviaComponent extends Component {
 
     this.state = {
       counter: 0,
+      count: 5,
       questionId: 0,
       question: '',
       answerOptions: [],
@@ -37,7 +38,7 @@ class TriviaComponent extends Component {
 
     // console.log(shuffledAnswerOptions[x]);
   }
-	
+
   shuffleArray(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
@@ -62,9 +63,9 @@ class TriviaComponent extends Component {
     let currentAnswer = event.currentTarget.value;
     this.setUserAnswer(event.currentTarget.value);
     if (event.currentTarget.value === this.state.correct){
-       console.log('FUCK YEAH DICKHEAD')
+       return this.state.count
     } else {
-      console.log('HAHA YOU FUCKING RETARD')
+      return (this.state.count - 1)
     }
     setTimeout(() => this.setNextQuestion(), 300)
     // if (this.state.questionId < QuizQuestions.length) {

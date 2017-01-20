@@ -6,7 +6,6 @@ var LogoLeft = require('LogoLeft');
 var LogoRight = require('LogoRight');
 var axios = require('axios');
 
-import TriviaApi from '../api/triviaApi'
 import TriviaComponent from './GameRoom/TriviaComponent'
 import '../../index.css'
 import Ken from './Ken'

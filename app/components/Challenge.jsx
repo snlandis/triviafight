@@ -9,37 +9,35 @@ import ChallengeInput from './ChallengeInput';
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
 import router from 'app/router/';
-
+import TwilioSMS from './Challenge/TwilioSMS.js'
 
 export var Challenge = React.createClass({
 
-	onLogout(e) {
+  onLogout(e) {
     var {dispatch} = this.props;
     e.preventDefault();
 
     dispatch(actions.startLogout());
   },
 
-
   render() {
-    return(
-			<div className="font-main">
-				<Nav />
-				<div className="page-actions">
-				</div>
-						<div className="row">
-							<div className="columns medium-3 columns small-centered">
-							<LogoLeft />
-						</div>
-	            <div className="columns medium-6 large-4 small-centered" id="challenge-form">
-									<ChallengeInput />
-							</div>
-							<div className="columns medium-3 medium-centered">
-							<LogoRight />
-						 </div>
-					</div>
-				<Footer />
-		</div>
+    return (
+      <div className="font-main">
+        <Nav/>
+        <div className="page-actions"></div>
+        <div className="row" id="logorow">
+          <div className="columns medium-3 large-2 small-centered">
+            <LogoLeft/>
+          </div>
+          <div className="columns medium-6  large-8 small-centered">
+            <TwilioSMS/>
+          </div>
+          <div className="columns medium-3 large-2 small-centered">
+            <LogoRight/>
+          </div>
+        </div>
+        <Footer/>
+      </div>
     );
   }
 });

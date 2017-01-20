@@ -9,6 +9,7 @@ import ChallengeInput from './ChallengeInput';
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
 import router from 'app/router/';
+import TwilioSMS from './Challenge/layout/App.js'
 
 
 export var Challenge = React.createClass({
@@ -32,7 +33,7 @@ export var Challenge = React.createClass({
 							<LogoLeft />
 						</div>
 	            <div className="columns medium-6 large-4 small-centered" id="challenge-form">
-									<ChallengeInput />
+									<TwilioSMS />
 							</div>
 							<div className="columns medium-3 medium-centered">
 							<LogoRight />

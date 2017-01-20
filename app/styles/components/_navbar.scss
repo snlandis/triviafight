@@ -1,12 +1,20 @@
 #navbar {
 	padding: 0rem;
+	background-color: #681728;
 }
+.top-bar {
+	background-color: #681728;
+}
+
 
 .top-bar-left {
 	height: 50px;
 	width: 100%;
 }
-
+.eachlink{
+	color: #7cc3cd;
+	font-size: 6rem;
+}
 
 .small-block-grid-4 li {
 	width: 25%;
@@ -17,6 +25,13 @@
 .small-block-grid-4 li a {
 	text-align: center;
 	width: 100%;
+	color: #7cc3cd;
+	font-size: x-large;
+	text-decoration: none;
+	font-weight:600;
+}
+.small-block-grid-4 li a:hover {
+	color:#ff2e2c;
 }
 
 .app-name, .eachLink {

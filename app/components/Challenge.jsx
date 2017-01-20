@@ -28,7 +28,6 @@ export var Challenge = React.createClass({
 			<div className="font-main">
 				<Nav />
 				<div className="page-actions">
-					<a href="#" onClick={this.onLogout}>Logout</a>
 				</div>
 						<div className="row">
 							<div className="columns medium-3 columns small-centered">
@@ -39,8 +38,8 @@ export var Challenge = React.createClass({
 									<form>
 										<div className="row" id="challenge-pg">
 											<div className="medium-6 columns">
-												<label className="challenge-form">Find by Display Name
-													<input type="text" placeholder="Display Name" />
+												<label className="challenge-form">Enter Phone # of the Person You wish to Challenge
+													<input type="text" placeholder="Phone Number" />
 												</label>
 											</div>
 											<div className="medium-6 columns">

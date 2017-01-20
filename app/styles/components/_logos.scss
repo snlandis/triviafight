@@ -8,8 +8,15 @@
   opacity: 0.7;
   align-items: flex-end;
 }
-
 #logoleft, #logoright {
   margin: 0 auto;
   display: block;
+}
+.imgLeft, .imgRight {
+  height: 30%;
+  width: auto;
+  position: absolute;
+}
+.logo-left-div, .logo-right-div {
+  vertical-align: top;
 }

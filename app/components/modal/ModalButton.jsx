@@ -14,7 +14,7 @@ var Modal = require('./Modal');
         <div>
           <button onClick={() => this.openModal()}>Open modal</button>
           <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-            <h1>Modal title</h1>
+            <h1>Challenge?</h1>
             <p>I'm proud of you!</p>
             <p><button onClick={() => this.closeModal()}>Close</button></p>
           </Modal>

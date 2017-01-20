@@ -14,15 +14,11 @@ try {
 }
 
 function writeUserData(userId, name, email, imageUrl) {
-  firebase.database().ref('leaderboard/' + userId).set({
-    username: name,
-		score: 432,
-    profile_picture : imageUrl
-  });
+  firebase.database().ref('leaderboard/' + userId).orderByChild('score');
 }
 
 var firebaseRef = firebase.database().ref('leaderboard/');
-
+firebaseRef.orderByChild('score');
 firebaseRef.set([
 	{
 		username: "Kollin Brandenburg",

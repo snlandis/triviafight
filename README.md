@@ -16,6 +16,8 @@ Socket.io: https://www.npmjs.com/package/socket.io
 API- Open Trivia DB: https://opentdb.com/
 <br>
 EJS
+<br>
+Twilio
 
 #User Stories
 This is where the stories go about why people should want to use this app.
@@ -33,11 +35,6 @@ Gameboard: ![Alt Text](app/images/Wireframe5.jpg)
 
 Component Layout: ![Alt Text](app/images/ComponentLayout.png)
 
-###Component Tree
-* Item 1
-* Item 2
-  * Sub Item 1
-  * Sub Item 2
 
 ###To Run project on your own:
 ```git clone https://github.com/ZHamburglar/triviafight.git```
@@ -55,6 +52,9 @@ API_KEY=
 AUTH_DOMAIN=
 DATABASE_URL=
 STORAGE_BUCKET=
+TWILIO_AUTH_TOKEN=
+TWILIO_ACCOUNT_SID=
+TWILIO_NUMBER=
 ```
 
 <br>

@@ -84,7 +84,7 @@ export default class Form extends React.Component {
     let formProps = this.props;
     return (
       <div className="challenge">
-        <p>Enter the Phone # of someone you want to Trivia Fight</p>
+        <p className="challengeText">Enter the Phone # of someone you want to Trivia Fight</p>
         <Response responseText={this.state.response}></Response>
         <form ref="theform" action={formProps.formAction} method={formProps.formMethod} onSubmit={this.Handlesubmit}>
           <formEl className="displayf">

@@ -10,7 +10,9 @@
   margin-top: -115px;
 	margin-left: -312px;
 }
-
+.challengeText{
+	font-weight:500;
+}
 .login_form {
     width: 300px;
     height: 300px;
@@ -93,8 +95,9 @@
 .form__container--phone {
     border: 1px solid #272121;
     height: 5vh;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 1rem;
+		padding-top: 21px;
 }
 
 .form__container--submit {

@@ -6,7 +6,6 @@ var LogoLeft = require('LogoLeft');
 var LogoRight = require('LogoRight');
 var axios = require('axios');
 
-import Buttoner from './Buttoner'
 import TriviaApi from '../api/triviaApi'
 import TriviaComponent from './GameRoom/TriviaComponent'
 import '../../index.css'
@@ -39,7 +38,6 @@ export var Gameroom = React.createClass({
           </div>
           <div className="columns medium-6 large-4 small-centered">
             <TriviaComponent/>
-            <Buttoner />
 
           </div>
           <div className="columns medium-3 medium-centered">

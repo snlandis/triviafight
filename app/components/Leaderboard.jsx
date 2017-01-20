@@ -10,6 +10,8 @@ import * as Redux from 'react-redux';
 import * as actions from 'actions';
 import router from 'app/router/';
 
+import firebase from 'firebase';
+
 export var Leaderboard = React.createClass({
 	onLogout(e) {
     var {dispatch} = this.props;
@@ -35,7 +37,6 @@ export var Leaderboard = React.createClass({
 						{/* <div className="row"> */}
 							{/* <div className="large-12 columns medium-centered"> */}
 
-
 						 <table className="leaderboard-table">
 							 <caption>Current Standings</caption>
 									<thead>
@@ -53,13 +54,13 @@ export var Leaderboard = React.createClass({
 								<tbody>
 									<tr>
 										<td>1</td>
-										<td>DickFart</td>
+										<td>Peter Griffin</td>
 										<td>13451</td>
 										<td>2</td>
 									</tr>
 									<tr>
 										<td>2</td>
-										<td>ShitToot</td>
+										<td>Homer Simpson</td>
 										<td>69</td>
 										<td>420</td>
 									</tr>
@@ -71,13 +72,13 @@ export var Leaderboard = React.createClass({
 									</tr>
 									<tr>
 										<td>4</td>
-										<td>BigDickHustler420</td>
+										<td>Kollin Brandenburg</td>
 										<td>55</td>
 										<td>100</td>
 									</tr>
 									<tr>
 										<td>5</td>
-										<td>Crack</td>
+										<td>Dirk Diggler</td>
 										<td>100</td>
 										<td>100</td>
 									</tr>

@@ -152,6 +152,7 @@ class TriviaComponent extends Component {
         questionTotal={QuizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
         checkForAnswer={this.checkForAnswer}
+        className="quiz"
       />
     );
   }

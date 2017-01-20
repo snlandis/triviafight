@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+
 }
 
 body {
@@ -9,21 +10,22 @@ body {
   padding: 0;
   background: #eee;
   font-family: sans-serif;
+  font-size: 30px;
+  border-radius: 3px black solid;
+
 }
 
-/*.container {
+.container {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  background: #fff;
-  border-radius: 3px;
-}*/
+}
 
-/*@media (min-width: 769px) {
+@media (min-width: 769px) {
   .container {
     margin: 2.5rem auto;
   }
-}*/
+}
 
 /* Result Component */
 .result {
@@ -35,18 +37,20 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  border-radius: 1px black;
 }
 
 /* QuestionCount Component */
 .questionCount {
   padding: 1.5rem 2.5rem 0;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /* Question Component */
 .question {
   margin: 0;
   padding: 0.5rem 2.5rem 1.5rem 2.5rem;
+  text-align: center;
 }
 
 /* AnswerOption Component */
@@ -55,7 +59,7 @@ body {
 }
 
 .answerOption:hover {
-  background-color: #eefbfe;
+  background-color: #eace7b;
 }
 
 .radioCustomButton {
@@ -90,16 +94,16 @@ body {
     display: inline-block;
     vertical-align: middle;
     background: #fff;
-    border: 1px solid #bbb;
+    border: 1px solid #681728;
     border-radius: 50%;
     transition: all 0.3s;
 }
 
 .radioCustomButton:checked ~ .radioCustomLabel:before {
     content: '';
-    background: #8BC53F url(./svg/icon-check.svg) no-repeat;
+    background: #681728;
     background-size: 27px;
-    border-color: #8BC53F;
+    border-color: #681728;
 }
 
 /* Animation */
@@ -114,8 +118,8 @@ body {
 
 .fade-leave {
     position: absolute;
-    top: auto 0;
-    left: auto 0;
+    top: 0;
+    left: 0;
     width: 50%;
     opacity: 1;
 }

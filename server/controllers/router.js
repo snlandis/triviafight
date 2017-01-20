@@ -20,7 +20,7 @@ router.post('/api/sms-promotion', function(req, res) {
     });
 
     promise.then(function() {
-        res.send("Challenge was sent successfully.");
+        res.send("Challenge sent.");
     }, function(erorr) {
         res.send("There was error sending a sms. Please try again later.");
     });

@@ -4,8 +4,9 @@ import Ryu from './Ryu'
 /*how the routes are defined, using inde link show the main link selected only when it is required*/
 var Ken = React.createClass({
 	getInitialState: function () {
-        return {favourite: false};
+        return {favourite: true};
     },
+
     handleClick: function (event) {
         this.setState({favourite: !this.state.favourite});
     },

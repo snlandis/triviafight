@@ -6,6 +6,7 @@ import update from 'react-addons-update';
 
 class TriviaComponent extends Component {
 
+
   constructor(props) {
     super(props);
 
@@ -15,6 +16,7 @@ class TriviaComponent extends Component {
       question: '',
       answerOptions: [],
       answers: [],
+      count: 5,
       result: '',
       correct: '',
       type: ''
@@ -37,7 +39,7 @@ class TriviaComponent extends Component {
 
     // console.log(shuffledAnswerOptions[x]);
   }
-	
+
   shuffleArray(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
@@ -65,6 +67,11 @@ class TriviaComponent extends Component {
        console.log('FUCK YEAH DICKHEAD')
     } else {
       console.log('HAHA YOU FUCKING RETARD')
+      this.setState({count: this.state.count - 1});
+      console.log(this.state.count);
+      if (this.state.count <= 1){
+        alert('You\'ve been knocked out!');
+      }
     }
     setTimeout(() => this.setNextQuestion(), 300)
     // if (this.state.questionId < QuizQuestions.length) {

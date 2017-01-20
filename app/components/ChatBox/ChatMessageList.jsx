@@ -89,7 +89,6 @@ class ChatMessageList extends Component {
               this.state.users.map(msg => (
                 <UserList
                   message={msg}
-                  userModal={this.userModal}
                 />
               )).reverse()
             }

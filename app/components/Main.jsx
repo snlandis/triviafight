@@ -13,34 +13,31 @@ import * as actions from 'actions';
 import router from 'app/router/';
 import ChatRoom from './ChatBox/ChatRoom';
 
-
 export var Main = React.createClass({
-	onLogout(e) {
+  onLogout(e) {
     var {dispatch} = this.props;
     e.preventDefault();
 
     dispatch(actions.startLogout());
   },
 
-  render : function(){
+  render: function() {
     return (
       <div className="font main">
-        <Nav />
-				<div className="page-actions">
-				</div>
-          <div className="row" id="logorow">
-						<div className="columns medium-3 large-2 small-centered">
-						<LogoLeft />
-					</div>
-            <div className="columns medium-6  large-8 small-centered">
-							<ChatRoom></ChatRoom>
-            </div>
-						<div className="columns medium-3 large-2 small-centered">
-						<LogoRight />
-					</div>
+        <Nav/>
+        <div className="page-actions"></div>
+        <div className="row" id="logorow">
+          <div className="columns medium-3 large-2 small-centered">
+            <LogoLeft/>
           </div>
-
-        <Footer />
+          <div className="columns medium-6  large-8 small-centered">
+            <ChatRoom></ChatRoom>
+          </div>
+          <div className="columns medium-3 large-2 small-centered">
+            <LogoRight/>
+          </div>
+        </div>
+        <Footer/>
       </div>
     );
   }

@@ -11,5 +11,6 @@ npm-debug.log
 .idea
 
 public/bundle.js
-/app/config/test.env
-/app/config/development.env
+config/test.env
+config/development.env
+config/production.env

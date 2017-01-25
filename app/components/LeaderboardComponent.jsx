@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react'
 import firebase from 'firebase'
+import LeaderboardUsers from './LeaderboardUsers'
 
 
 class LeaderboardComponent extends Component {
+
   constructor (props) {
     super(props)
     this.leaderboardDB = firebase.database().ref(`leaderboard/`)
@@ -14,16 +16,18 @@ class LeaderboardComponent extends Component {
 
   componentWillMount () {
     this.leaderboardDB.on('child_added', snap => {
-      this.setState({
-        users: this.state.users.concat(snap.val())
-      })
-      console.log(snap.val());
+      // this.setState({
+      //   users: this.state.users.concat(snap.val())
+      //   console.log(users);
+      // })
+      console.log("Leaderboard User: ", snap.val());
     })
   }
 
   ComponentWillUnmount () {
     this.leaderboardDB.off()
   }
+
 
   render() {
     return (

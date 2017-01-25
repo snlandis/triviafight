@@ -9,6 +9,7 @@ var LogoRight = require('LogoRight');
 import * as Redux from 'react-redux';
 import * as actions from 'actions';
 import router from 'app/router/';
+import LeaderboardComponent from './LeaderboardComponent'
 
 import firebase from 'firebase';
 
@@ -115,6 +116,7 @@ export var Leaderboard = React.createClass({
 										</tbody>
 									</table>
 								</div>
+								<LeaderboardComponent />
 							{/* </div> */}
 
 
